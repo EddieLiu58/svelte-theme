@@ -4,10 +4,13 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
-		'prettier'
+		'plugin:prettier/recommended'
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint','tailwindcss'],
+	rules:{
+		'tailwindcss/classnames-order': 'off', // Respect prettier-plugin-tailwindcss order
+	},
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
@@ -24,7 +27,12 @@ module.exports = {
 			parser: 'svelte-eslint-parser',
 			parserOptions: {
 				parser: '@typescript-eslint/parser'
-			}
+			},
+			env: { browser: true, node: false },
+      rules: {
+        'no-inner-declarations': 'off',
+        'no-self-assign': 'off',
+      },
 		}
 	]
 };

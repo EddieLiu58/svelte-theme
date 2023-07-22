@@ -1,7 +1,7 @@
-<h1 class="text-3xl font-bold underline">
+<h1 class="text-3xl font-bold text-red-300">
   大家一起躺著賺-首頁
 </h1>
-
+<div class="h-[1000px]"></div>
 <style lang="postcss">
   :global(html) {
     background-color: theme(colors.gray.100);
