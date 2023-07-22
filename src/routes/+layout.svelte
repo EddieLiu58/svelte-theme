@@ -1,22 +1,26 @@
 <script>
 	// @ts-nocheck
-
+	import Headroom from 'svelte-headroom';
 	import '../app.css';
-	import { Button } from '@svelteuidev/core';
-	function toggle() {
-		window.document.body.classList.toggle('dark-mode');
-	}
+	let y = 0;
 </script>
 
-<header class="sticky top-0 flex items-center justify-between bg-slate-500 px-4">
-	<div>logo</div>
-	<div class="grid grid-cols-3 gap-2">
-		<div class="text-center">Dark Mode</div>
-		<div class="text-center">Search</div>
-		<div class="text-center">Menu</div>
-	</div>
-</header>
-<slot />
+<svelte:window bind:scrollY={y} />
+<Headroom duration="350ms" offset={300} tolerance={5}>
+	<header
+		class="flex h-[64px] items-center justify-between bg-slate-200 px-4 transition duration-300"
+	>
+		<div>logo</div>
+		<div class="grid grid-cols-3 gap-2">
+			<div class="text-center">Dark Mode</div>
+			<div class="text-center">Search</div>
+			<div class="text-center">Menu</div>
+		</div>
+	</header>
+</Headroom>
+<body class="mt-[64px]">
+	<slot />
+</body>
 <footer class="flex flex-col bg-slate-500 px-4">
 	<div class="mb-8 mt-8 grid grid-flow-col">
 		<a target="_blank" rel="noreferrer" href="/" class="text-center"
