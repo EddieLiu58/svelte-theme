@@ -1,5 +1,8 @@
 <script lang="ts">
 	// @ts-nocheck
+	import { slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 	import Headroom from 'svelte-headroom';
 	import '../app.css';
 	import '@fontsource/noto-sans-tc/100.css';
@@ -8,11 +11,13 @@
 	import '@fontsource/noto-sans-tc/500.css';
 	import '@fontsource/noto-sans-tc/700.css';
 	import '@fontsource/noto-sans-tc/900.css';
-	let y = 0;
-	let MenutranslateX = -100;
+	let MenutranslateX = false;
+	function OpenMenu() {
+		MenutranslateX = !MenutranslateX;
+	}
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window />
 
 <Headroom duration="350ms" offset={300} tolerance={5}>
 	<header class="flex h-auto items-center justify-between bg-white px-4 transition duration-300">
@@ -20,7 +25,9 @@
 		<div class="grid grid-cols-3 gap-2">
 			<div class="text-center text-xl font-bold text-[#fb7d67]">深色模式</div>
 			<div class="text-center text-xl font-bold text-[#fb7d67]">搜尋</div>
-			<div class="text-center text-xl font-bold text-[#fb7d67]">目錄</div>
+			<div class="text-center text-xl font-bold text-[#fb7d67]">
+				<button on:click={OpenMenu}>目錄</button>
+			</div>
 		</div>
 	</header>
 </Headroom>
@@ -48,16 +55,30 @@
 		</div>
 	</div>
 </footer>
-<div
-	class="fixed right-0 top-0 h-screen w-screen transition duration-300"
-	style:transform="translateX(-100%)"
->
-	<div class="absolute left-0 top-0 -z-10 h-full w-full bg-gray-900 opacity-10" />
-	<ul class="float-right h-screen w-[300px] bg-orange-300 p-4">
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-	</ul>
+<div>
+	{#if MenutranslateX === true}
+		<div class=" opacity-1 fixed left-0 top-0 z-40 flex h-full w-full justify-end">
+			<div
+				class=" right-0 top-0 z-20 h-screen w-fit"
+				transition:slide={{ delay: 150, duration: 250, easing: cubicOut, axis: 'x' }}
+			>
+				<ul class="float-right h-screen w-[300px] bg-white p-4">
+					<li><a href="/">個人設定</a></li>
+					<li><a href="/">帳務中心</a></li>
+					<li><a href="/">我的小說</a></li>
+					<li><a href="/">登入</a></li>
+				</ul>
+			</div>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-interactive-supports-focus -->
+			<div
+				role="button"
+				class=" absolute left-0 top-0 -z-10 h-full w-full bg-[#4a5568cc] opacity-30"
+				transition:fade={{ delay: 150, duration: 150 }}
+				on:click={OpenMenu}
+			/>
+		</div>
+	{/if}
 </div>
 
 <style lang="postcss">
