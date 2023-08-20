@@ -37,10 +37,14 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/noto-sans-tc": "^5.0.5",
+		"@splidejs/svelte-splide": "^0.2.9",
 		"@svelte-web-fonts/google": "^1.0.4",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@svelteuidev/composables": "^0.14.0",
 		"@svelteuidev/core": "^0.14.0",
+		"postcss-import": "^15.1.0",
+		"siema": "^1.5.1",
+		"svelte-carousel": "^1.0.25",
 		"svelte-headroom": "^2.2.1"
 	}
 }

@@ -18,10 +18,11 @@
 </script>
 
 <svelte:window />
-
 <Headroom duration="350ms" offset={300} tolerance={5}>
-	<header class="flex h-auto items-center justify-between bg-white px-4 transition duration-300">
-		<div><img src="./images/logo.png" alt="logo" width="105" height="105" /></div>
+	<header
+		class="z-50 flex h-auto items-center justify-between bg-white px-4 transition duration-300"
+	>
+		<div><img src="./images/logo.png" alt="logo" width="120" height="120" /></div>
 		<div class="grid grid-cols-3 gap-2">
 			<div class="text-center text-xl font-bold text-[#fb7d67]">深色模式</div>
 			<div class="text-center text-xl font-bold text-[#fb7d67]">搜尋</div>
@@ -31,10 +32,8 @@
 		</div>
 	</header>
 </Headroom>
-<body class="mt-[64px]">
-	<slot />
-</body>
-<footer class="flex flex-col bg-slate-300 p-4">
+<div class="mt-[120px]"><slot /></div>
+<footer class="mt-12 flex flex-col bg-slate-300 p-4">
 	<div class="mb-8 mt-8 grid grid-flow-col">
 		<a target="_blank" rel="noreferrer" href="/" class="text-center"
 			><span class="css-1clmpdf">成為創作者</span></a
@@ -85,5 +84,8 @@
 	:global(html) {
 		font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 			Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+	:global(div.svelte-1ql6gaa) {
+		z-index: 30;
 	}
 </style>
