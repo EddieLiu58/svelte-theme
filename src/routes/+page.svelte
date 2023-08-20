@@ -187,7 +187,7 @@
 </script>
 
 <h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-首頁</h1>
-<div class="mb-12">
+<div class="dream mb-12">
 	<Splide
 		options={{
 			type: 'loop',
@@ -227,7 +227,7 @@
 		{/each}
 	</Splide>
 </div>
-<div class="mx-auto grid max-w-6xl gap-y-8 px-4">
+<div class="dream mx-auto grid max-w-6xl gap-y-8 px-4">
 	<div class="session-1 relative w-full">
 		<h2 class="mb-3 text-xl font-bold">最新消息</h2>
 		<Splide
