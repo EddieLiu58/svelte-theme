@@ -6,7 +6,8 @@ export default {
 		extend: {
 			colors: {
 				transparent: 'transparent',
-				footer: '#2d3748'
+				footer: '#2d3748',
+				search: '#f7fafc'
 			}
 		}
 	},
