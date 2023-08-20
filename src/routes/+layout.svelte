@@ -24,7 +24,6 @@
 	>
 		<div><img src="./images/logo.png" alt="logo" width="120" height="120" /></div>
 		<div class="grid grid-cols-3 gap-2">
-			<div class="text-center text-xl font-bold text-[#fb7d67]">深色模式</div>
 			<div class="text-center text-xl font-bold text-[#fb7d67]">搜尋</div>
 			<div class="text-center text-xl font-bold text-[#fb7d67]">
 				<button on:click={OpenMenu}>目錄</button>
@@ -87,5 +86,8 @@
 	}
 	:global(div.svelte-1ql6gaa) {
 		z-index: 30;
+	}
+	:global(.splide__pagination__page.is-active) {
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 </style>
