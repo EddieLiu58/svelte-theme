@@ -33,24 +33,26 @@
 		</header>
 	</Headroom>
 	<div class="mt-[120px]"><slot /></div>
-	<footer class="mt-12 flex flex-col bg-slate-300 p-4">
-		<div class="mb-8 mt-8 grid grid-flow-col">
+	<footer class="mt-12 flex flex-col items-center bg-footer p-4">
+		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_blank" rel="noreferrer" href="/" class="text-center"
-				><span class="css-1clmpdf">成為創作者</span></a
+				><span class="text-white">成為創作者</span></a
 			><a target="_self" rel="noreferrer" href="/tos" class="text-center"
-				><span class="css-1clmpdf">服務條款</span></a
+				><span class="text-white">服務條款</span></a
 			><a target="_self" rel="noreferrer" href="/privacypolicy" class="text-center"
-				><span class="css-1clmpdf">隱私政策</span></a
+				><span class="text-white">隱私政策</span></a
 			><a target="_blank" rel="noreferrer" href="/" class="text-center"
-				><span class="css-1clmpdf">常見問題</span></a
+				><span class="text-white">常見問題</span></a
 			>
 		</div>
 		<div class="item-center flex flex-col justify-center">
 			<div class="text-center">
-				<span>躺著賺有限公司</span><span>© All Rights Reserved</span>
+				<span class="text-white">躺著賺有限公司</span><span class="text-white"
+					>© All Rights Reserved</span
+				>
 			</div>
 			<div class="text-center">
-				<span>統編：</span><span>地址：</span>
+				<span class="text-white">統編：</span><span class="text-white">地址：</span>
 			</div>
 		</div>
 	</footer>

@@ -247,11 +247,14 @@
 					page: 'splide__pagination__page bg-gray-500'
 				},
 				breakpoints: {
-					1280: {
+					1200: {
 						perPage: 4
 					},
-					768: {
+					1024: {
 						perPage: 3
+					},
+					768: {
+						perPage: 2
 					}
 				}
 			}}
@@ -292,11 +295,14 @@
 					page: 'splide__pagination__page bg-gray-500'
 				},
 				breakpoints: {
-					1280: {
+					1200: {
 						perPage: 4
 					},
-					768: {
+					1024: {
 						perPage: 3
+					},
+					768: {
+						perPage: 2
 					}
 				}
 			}}
@@ -337,11 +343,14 @@
 					page: 'splide__pagination__page bg-gray-500'
 				},
 				breakpoints: {
-					1280: {
+					1200: {
 						perPage: 4
 					},
-					768: {
+					1024: {
 						perPage: 3
+					},
+					768: {
+						perPage: 2
 					}
 				}
 			}}

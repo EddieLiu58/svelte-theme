@@ -3,7 +3,12 @@ export default {
 	important: '#app',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				transparent: 'transparent',
+				footer: '#2d3748'
+			}
+		}
 	},
 	plugins: []
 };
