@@ -23,7 +23,7 @@
 		<header
 			class="z-50 flex h-auto items-center justify-between bg-white px-4 transition duration-300"
 		>
-			<div><img src="/images/logo.png" alt="logo" width="120" height="120" /></div>
+			<div><a href="/"><img src="/images/logo.png" alt="logo" width="120" height="120" /></a></div>
 			<div class="grid grid-cols-3 gap-2">
 				<div class="text-center text-xl font-bold text-[#fb7d67]">搜尋</div>
 				<div class="text-center text-xl font-bold text-[#fb7d67]">
