@@ -37,9 +37,9 @@
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_blank" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">成為創作者</span></a
-			><a target="_self" rel="noreferrer" href="/tos" class="text-center"
+			><a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">服務條款</span></a
-			><a target="_self" rel="noreferrer" href="/privacypolicy" class="text-center"
+			><a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">隱私政策</span></a
 			><a target="_blank" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">常見問題</span></a
