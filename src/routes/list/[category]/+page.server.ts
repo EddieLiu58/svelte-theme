@@ -1,7 +1,7 @@
 import type { EntryGenerator } from './$types';
 
 export const entries: EntryGenerator = () => {
-    return [{ category: '玄幻' }, { category: '校園' }];
+    return [{ category: 'category' }];
 };
 
 export const prerender = true;

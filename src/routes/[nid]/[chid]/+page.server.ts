@@ -1,7 +1,7 @@
 import type { EntryGenerator } from './$types';
 
 export const entries: EntryGenerator = () => {
-    return [{ nid: 'hello',chid: 'world' }, { nid: 'hello',chid: 'hello' }, { nid: 'hello',chid: 'world' }];
+    return [{ nid: 'nid',chid: 'chid' }];
 };
 
 export const prerender = true;
