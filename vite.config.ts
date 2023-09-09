@@ -11,6 +11,11 @@ export default defineConfig({
 				rewrite: (path) => path.replace(/^\/api/, ''),
 				changeOrigin: true
 		},
+		'/svelte-theme/api': {
+			target: 'https://api.inovels.click',
+			rewrite: (path) => path.replace(/^\/api/, ''),
+			changeOrigin: true
+		},
 	  }
 	},
 	test: {
