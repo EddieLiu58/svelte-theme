@@ -4,6 +4,7 @@
 	import axios from 'axios';
 	import { onMount } from 'svelte';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 
 	const topList = [
@@ -20,10 +21,10 @@
 	let scienceList: Array<string> = [];
 
 	async function fetchList() {
-		let category = await axios.get('/api/novels/category/list');
+		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
 		// 玄幻
-		let fantasy = await axios.get('/api/novels/category?page=1&size=12&cat=玄幻');
+		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
 		// 科幻
 		let science = await axios.get('/api/novels/category?page=1&size=12&cat=科幻');
