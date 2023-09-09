@@ -27,14 +27,14 @@
 		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
 		// 科幻
-		let science = await axios.get('/api/novels/category?page=1&size=12&cat=科幻');
+		let science = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=科幻`);
 		scienceList = [...scienceList, ...science.data];
 		console.log(scienceList);
 		// 校園
-		let school = await axios.get('/api/novels/category?page=1&size=12&cat=校園');
+		let school = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=校園`);
 		schoolList = [...schoolList, ...school.data];
 		// 青春
-		let youth = await axios.get('/api/novels/category?page=1&size=12&cat=青春');
+		let youth = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=青春`);
 		youthlList = [...youthlList, ...youth.data];
 	}
 	onMount(() => {
