@@ -28,7 +28,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/svelte-theme'
+          PUBLIC_BASE_PATH: '/svelte-theme'
           PUBLIC_PROD_BASE_URL: 'https://api.inovels.click'
         run: |
           npm run build
