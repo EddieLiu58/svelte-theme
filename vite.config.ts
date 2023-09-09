@@ -1,10 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import mkcert from "vite-plugin-mkcert"
 import { defineConfig } from 'vitest/config';
+import { ssp } from "sveltekit-search-params/plugin";
 import fs from 'fs';
 
 export default defineConfig({
-	plugins: [sveltekit(),mkcert()],
+	plugins: [sveltekit(),mkcert(),ssp()],
 	server: {
 			https: {
 				key: fs.readFileSync(`./cert/key.pem`),

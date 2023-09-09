@@ -1,7 +1,5 @@
 <script lang="ts">
-	// @ts-ignore
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
-	const baseUrl = PUBLIC_PROD_BASE_URL;
 	/** @type {import('./$types').PageData} */
 	export let data: {
 		chaptersList: Array<{ id: string; title: string }>;
@@ -9,6 +7,8 @@
 		nid: string;
 		item: { id: string; name: string; author: string; category: string; introduction: string };
 	};
+
+	const baseUrl = PUBLIC_PROD_BASE_URL;
 </script>
 
 <div class="mx-auto grid">
@@ -33,7 +33,7 @@
 							>開始閱讀</a
 						>
 						<a
-							href="/list"
+							href="/list/{data.item.category}"
 							class="w-full rounded-[180px] border-2 border-solid border-white p-4 text-center transition-all hover:bg-white hover:text-gray-400"
 							>返回列表頁</a
 						>

@@ -260,7 +260,7 @@
 	<div class="grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
 			<a
-				href="/list?category=${category}"
+				href="/list/{category}"
 				class="w-full rounded-[180px] border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>{category}</a
 			>

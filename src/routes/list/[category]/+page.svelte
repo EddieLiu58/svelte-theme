@@ -2,8 +2,20 @@
 	import axios from 'axios';
 	import InfiniteScroll from 'svelte-infinite-scroll';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+
+	/** @type {import('./$types').PageData} */
+	export let data: {
+		category: string;
+		item: Array<{
+			id: string;
+			name: string;
+			author: string;
+			category: string;
+			introduction: string;
+		}>;
+	};
 
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 	let list: Array<{ id: string; name: string; author: string; introduction: string }> = [];
@@ -11,20 +23,35 @@
 	let newBatch: Array<{ id: string; name: string; author: string; introduction: string }> = [];
 	let categoryList: Array<string> = [];
 	let currentPage = 1;
-	let cat = $page.url.searchParams.get('cat');
+	let cat = data.category;
+
 	async function fetchCategory() {
 		let category = await axios.get('/api/novels/category/list');
 		categoryList = [...categoryList, ...category.data];
 	}
+
 	async function fetchList() {
-		const content = await axios.get(`/api/novels?page=${currentPage}&size=24`);
+		const content = await axios.get(`/api/novels/category?page=${currentPage}&size=24&cat=${cat}`);
 		newBatch = content.data;
+		list = [...list, ...newBatch];
 	}
-	onMount(() => {
-		fetchCategory();
+
+	async function updateList(item: string) {
+		goto(`/list/${item}`);
+		currentPage = 1;
+		list = [];
+		console.log(list);
+		cat = item;
 		fetchList();
+	}
+
+	onMount(() => {
+		list = [...list, ...data.item];
+		fetchCategory();
 	});
-	$: list = [...list, ...newBatch];
+
+	$: if (list) fetchList;
+	$: if (cat) fetchList;
 </script>
 
 <div class="mx-auto grid max-w-6xl px-4">
@@ -38,10 +65,12 @@
 	</div>
 	<div class="mb-8 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
-			<a
-				href="/list/{category}"
+			<button
+				on:click={() => {
+					updateList(category);
+				}}
 				class="w-full rounded-[180px] border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
-				>{category}</a
+				>{category}</button
 			>
 		{/each}
 	</div>
@@ -62,7 +91,7 @@
 			</li>
 		{/each}
 		<InfiniteScroll
-			hasMore={newBatch.length}
+			hasMore={list.length}
 			window={true}
 			threshold={100}
 			on:loadMore={() => {
