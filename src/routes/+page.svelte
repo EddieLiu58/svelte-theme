@@ -4,15 +4,16 @@
 	import axios from 'axios';
 	import { onMount } from 'svelte';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+	import { base } from '$app/paths';
 
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 
 	const topList = [
-		{ url: '/', image: `%sveltekit.assets%/images/topSlide1.webp` },
-		{ url: '/', image: `%sveltekit.assets%/images/topSlide2.webp` },
-		{ url: '/', image: `%sveltekit.assets%/images/topSlide3.webp` },
-		{ url: '/', image: `%sveltekit.assets%/images/topSlide4.webp` },
-		{ url: '/', image: `%sveltekit.assets%/images/topSlide5.webp` }
+		{ url: '/', image: `${base}/images/topSlide1.webp` },
+		{ url: '/', image: `${base}/images/topSlide2.webp` },
+		{ url: '/', image: `${base}/images/topSlide3.webp` },
+		{ url: '/', image: `${base}/images/topSlide4.webp` },
+		{ url: '/', image: `${base}/images/topSlide5.webp` }
 	];
 	let categoryList: Array<string> = [];
 	let schoolList: Array<string> = [];
