@@ -5,194 +5,20 @@
 	import { onMount } from 'svelte';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	const baseUrl = PUBLIC_PROD_BASE_URL;
-	const newsList = [
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/Final.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/Final.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		}
-	];
-	const categoryFirstList = [
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/Final.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/Final.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/84d3bd6e79506dfe4e994e39130d9f90.png'
-		}
-	];
-	const categorySecondList = [
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		},
-		{
-			title: '鬥神天下',
-			author: '石榴',
-			descripton: '鬥氣流行的修煉世界中，不屈服於命運的方南，意外的獲得了一把據',
-			url: '/',
-			image: './images/blob.png'
-		}
-	];
-	const topList = [
-		{ url: '/', image: './images/topSlide1.webp' },
-		{ url: '/', image: './images/topSlide2.webp' },
-		{ url: '/', image: './images/topSlide3.webp' },
-		{ url: '/', image: './images/topSlide4.webp' },
-		{ url: '/', image: './images/topSlide5.webp' }
-	];
 
+	const topList = [
+		{ url: '/', image: '/images/topSlide1.webp' },
+		{ url: '/', image: '/images/topSlide2.webp' },
+		{ url: '/', image: '/images/topSlide3.webp' },
+		{ url: '/', image: '/images/topSlide4.webp' },
+		{ url: '/', image: '/images/topSlide5.webp' }
+	];
 	let categoryList: Array<string> = [];
 	let schoolList: Array<string> = [];
 	let youthlList: Array<string> = [];
 	let fantasylList: Array<string> = [];
 	let scienceList: Array<string> = [];
-	let currentPage = 1;
+
 	async function fetchList() {
 		let category = await axios.get('/api/novels/category/list');
 		categoryList = [...categoryList, ...category.data];
