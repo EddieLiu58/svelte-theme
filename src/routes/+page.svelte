@@ -8,11 +8,11 @@
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 
 	const topList = [
-		{ url: '/', image: `/images/topSlide1.webp` },
-		{ url: '/', image: `/images/topSlide2.webp` },
-		{ url: '/', image: `/images/topSlide3.webp` },
-		{ url: '/', image: `/images/topSlide4.webp` },
-		{ url: '/', image: `/images/topSlide5.webp` }
+		{ url: '/', image: `%sveltekit.assets%/images/topSlide1.webp` },
+		{ url: '/', image: `%sveltekit.assets%/images/topSlide2.webp` },
+		{ url: '/', image: `%sveltekit.assets%/images/topSlide3.webp` },
+		{ url: '/', image: `%sveltekit.assets%/images/topSlide4.webp` },
+		{ url: '/', image: `%sveltekit.assets%/images/topSlide5.webp` }
 	];
 	let categoryList: Array<string> = [];
 	let schoolList: Array<string> = [];
