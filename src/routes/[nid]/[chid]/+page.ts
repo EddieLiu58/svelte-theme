@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import axios from 'axios';
+export const ssr = false;
  /** @type {import('./$types').PageServerLoad} */
 export const load: PageLoad = async ({ params }) => {
   let item: Array<string> = [];
@@ -18,7 +19,7 @@ export const load: PageLoad = async ({ params }) => {
   prevId = novelsItem.chapters_ids[currentIndex - 1];
   nextId  = novelsItem.chapters_ids[currentIndex + 1];
   
-  if (params.slug !== 'hello-world') {
+  if (item) {
     return {
       item,novelsItem,currentIndex,allIndex,nid,prevId,nextId
     };

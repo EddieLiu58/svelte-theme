@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	/** @type {import('./$types').PageData} */
 	export let data: {
 		nid: string;

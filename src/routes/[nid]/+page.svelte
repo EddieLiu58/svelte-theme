@@ -13,7 +13,7 @@
 
 <div class="mx-auto grid">
 	<h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-內容頁</h1>
-	<div class="w-full bg-[url('./images/blob.png')] bg-cover bg-no-repeat">
+	<div class="w-full bg-[url('/images/blob.png')] bg-cover bg-no-repeat">
 		<div class="w-full backdrop-blur-lg">
 			<div class="mx-auto grid min-h-[500px] w-full max-w-3xl grid-cols-2 gap-12 py-16">
 				<div class="overflow-hidden rounded-md">

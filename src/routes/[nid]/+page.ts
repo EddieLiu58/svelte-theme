@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import axios from 'axios';
+export const ssr = false;
  /** @type {import('./$types').PageServerLoad} */
 export const load: PageLoad = async ({ params }) => {
   let item: Array<string> = [];
@@ -12,7 +13,7 @@ export const load: PageLoad = async ({ params }) => {
   chaptersList = chapters.data;
   firstId = chapters.data[0].id;
   
-  if (params.slug !== 'hello-world') {
+  if (item) {
     return {
       item,chaptersList,nid,firstId
     };
