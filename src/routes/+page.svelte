@@ -22,11 +22,11 @@
 	let scienceList: Array<string> = [];
 
 	async function fetchList() {
-		let category = await axios.get(`${baseUrl}novels/category/list`);
+		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
 		console.log(categoryList);
 		// 玄幻
-		let fantasy = await axios.get(`${baseUrl}novels/category?page=1&size=12&cat=玄幻`);
+		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
 		// 科幻
 		let science = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=科幻`);
