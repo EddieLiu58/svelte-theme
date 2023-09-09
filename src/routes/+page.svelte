@@ -22,7 +22,7 @@
 	let scienceList: Array<string> = [];
 
 	async function fetchList() {
-		let category = await axios.get('/api/novels/category/list');
+		let category = await axios.get(`${base}/api/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
 		console.log(categoryList);
 		// 玄幻
