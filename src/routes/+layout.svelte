@@ -24,20 +24,18 @@
 			class="z-50 flex h-auto items-center justify-between bg-white px-4 transition duration-300"
 		>
 			<div><a href="/"><img src="/images/logo.png" alt="logo" width="120" height="120" /></a></div>
-			<div class="grid grid-cols-3 gap-2">
-				<div class="text-center text-xl font-bold text-[#fb7d67]">搜尋</div>
-				<div class="text-center text-xl font-bold text-[#fb7d67]">
+			<div class="grid grid-cols-2 gap-2">
+				<div class="text-center text-xl font-bold text-[#fb7d67]"><a href="/list">搜尋</a></div>
+				<!-- <div class="text-center text-xl font-bold text-[#fb7d67]">
 					<button on:click={OpenMenu}>目錄</button>
-				</div>
+				</div> -->
 			</div>
 		</header>
 	</Headroom>
 	<div class="mt-[120px]"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-footer p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
-			<a target="_blank" rel="noreferrer" href="/" class="text-center"
-				><span class="text-white">成為創作者</span></a
-			><a target="_self" rel="noreferrer" href="/" class="text-center"
+			<a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">服務條款</span></a
 			><a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">隱私政策</span></a
@@ -51,7 +49,7 @@
 					>© All Rights Reserved</span
 				>
 			</div>
-			<div class="text-center">
+			<div class="hidden text-center">
 				<span class="text-white">統編：</span><span class="text-white">地址：</span>
 			</div>
 		</div>

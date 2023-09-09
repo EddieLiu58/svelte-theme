@@ -23,10 +23,11 @@
 
 <div class="mx-auto grid max-w-6xl px-4">
 	<h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-列表頁1</h1>
-	<div class="">
+	<div class="mt-8">
 		<input
 			type="search"
-			class="mb-4 w-full rounded-lg border-2 border-solid border-transparent bg-search p-4 outline-none focus:border-red-300"
+			placeholder="請輸入關鍵字..."
+			class="mb-4 w-full rounded-lg border-2 border-solid border-gray-200 bg-search p-4 outline-none focus:border-red-300"
 		/>
 	</div>
 	<div class="mb-4">共 <span class="text-red-300">{list.length}</span> 部作品</div>
