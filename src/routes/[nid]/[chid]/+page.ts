@@ -17,7 +17,7 @@ export const load: PageLoad = async ({ params }) => {
   allIndex = novelsItem.chapters_ids.length;
   prevId = novelsItem.chapters_ids[currentIndex - 1];
   nextId  = novelsItem.chapters_ids[currentIndex + 1];
-
+  
   if (params.slug !== 'hello-world') {
     return {
       item,novelsItem,currentIndex,allIndex,nid,prevId,nextId

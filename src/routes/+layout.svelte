@@ -21,7 +21,7 @@
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
 		<header
-			class="z-50 flex h-auto items-center justify-between bg-white px-4 transition duration-300"
+			class="z-50 flex h-auto w-full items-center justify-between bg-white px-4 transition duration-300"
 		>
 			<div><a href="/"><img src="/images/logo.png" alt="logo" width="120" height="120" /></a></div>
 			<div class="grid grid-cols-2 gap-2">
@@ -32,7 +32,7 @@
 			</div>
 		</header>
 	</Headroom>
-	<div class="mt-[120px]"><slot /></div>
+	<div class="mt-[120px] w-full"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-footer p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_self" rel="noreferrer" href="/" class="text-center"

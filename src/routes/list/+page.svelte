@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// @ts-ignore
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -6,9 +6,9 @@
 	import axios from 'axios';
 	import InfiniteScroll from 'svelte-infinite-scroll';
 	const baseUrl = PUBLIC_PROD_BASE_URL;
-	let list = [];
+	let list: Array<{ id: string; name: string; author: string; introduction: string }> = [];
 	// store the new batch of data here.
-	let newBatch = [];
+	let newBatch: Array<{ id: string; name: string; author: string; introduction: string }> = [];
 	let currentPage = 1;
 	let error = null;
 	async function fetchList() {
