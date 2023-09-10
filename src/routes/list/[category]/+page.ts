@@ -6,14 +6,15 @@ export const ssr = false;
 export const load: PageLoad = async ({ params }) => {
   let item: Array<string> = [];
   let category = params.category;
-  const content = await axios.get(`${PUBLIC_PROD_BASE_URL}/novels/category?page=1&size=24&cat=${category}`);
+  const baseUrl = PUBLIC_PROD_BASE_URL;
+  const content = await axios.get(`${baseUrl}/novels/category?page=1&size=24&cat=${category}`);
   item = content.data;
   
-  if (content) {
+  if (item) {
     return {
       item,category
     };
   }
- 
+  
   throw error(404, 'Not found');
 };

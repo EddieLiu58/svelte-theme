@@ -128,7 +128,7 @@
 		>
 			{#each fantasylList as item}
 				<SplideSlide>
-					<a href="/{item.id}" class="gap-2">
+					<a href="{base}/{item.id}" class="gap-2">
 						<div class="max-h-[240px] w-full overflow-hidden rounded-md">
 							<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
 						</div>
@@ -147,7 +147,7 @@
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
 			{#each scienceList as item}
 				<a
-					href="/{item.id}"
+					href="{base}/{item.id}"
 					class="w-full gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
@@ -169,7 +169,7 @@
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
 			{#each schoolList as item}
 				<a
-					href="/{item.id}"
+					href="{base}/{item.id}"
 					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
@@ -191,7 +191,7 @@
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
 			{#each youthlList as item}
 				<a
-					href="/{item.id}"
+					href="{base}/{item.id}"
 					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">

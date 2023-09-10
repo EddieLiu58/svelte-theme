@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+	import { base } from '$app/paths';
 
 	/** @type {import('./$types').PageData} */
 	export let data: {
@@ -80,7 +81,7 @@
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
 		{#each list as item}
 			<li>
-				<a href="/{item.id}" class="flex gap-2">
+				<a href="{base}/{item.id}" class="flex gap-2">
 					<div class="max-h-[240px] w-full max-w-[110px] overflow-hidden rounded-md">
 						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
 					</div>

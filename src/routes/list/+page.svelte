@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+	import { base } from '$app/paths';
 
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 	let list: Array<{ id: string; name: string; author: string; introduction: string }> = [];
@@ -39,7 +40,7 @@
 	<div class="mb-8 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
 			<a
-				href="/list/{category}"
+				href="{base}/list/{category}"
 				class="w-full rounded-[180px] border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>{category}</a
 			>
@@ -49,7 +50,7 @@
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
 		{#each list as item}
 			<li>
-				<a href="/{item.id}" class="flex gap-2">
+				<a href="{base}/{item.id}" class="flex gap-2">
 					<div class="max-h-[240px] w-full max-w-[110px] overflow-hidden rounded-md">
 						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
 					</div>

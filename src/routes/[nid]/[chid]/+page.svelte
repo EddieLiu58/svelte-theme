@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	/** @type {import('./$types').PageData} */
 	export let data: {
 		nid: string;
@@ -12,7 +13,7 @@
 
 <div class="mx-auto grid">
 	<div class="mx-auto w-full max-w-4xl px-4">
-		<a href="/{data.nid}" class="mb-8 flex items-center text-xl"
+		<a href="{base}/{data.nid}" class="mb-8 flex items-center text-xl"
 			><svg
 				stroke="currentColor"
 				fill="none"
@@ -32,12 +33,12 @@
 		<div class="mt-8 flex justify-between">
 			<div>
 				{#if data.currentIndex !== 0}
-					<a href="/{data.nid}/{data.prevId}" class="text-xl font-bold">上一章</a>
+					<a href="{base}/{data.nid}/{data.prevId}" class="text-xl font-bold">上一章</a>
 				{/if}
 			</div>
 			<div>
 				{#if data.currentIndex !== data.allIndex}
-					<a href="/{data.nid}/{data.nextId}" class="text-xl font-bold">下一章</a>
+					<a href="{base}/{data.nid}/{data.nextId}" class="text-xl font-bold">下一章</a>
 				{/if}
 			</div>
 		</div>
