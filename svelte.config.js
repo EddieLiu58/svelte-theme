@@ -19,9 +19,10 @@ const config = {
 			// these options are set automatically — see below
 			pages: 'build/',
 			assets: 'build/',
-			fallback: '200.html', // may differ from host to host
+			fallback: 'index.html', // may differ from host to host
 			precompress: false,
-			strict: true
+			strict: false,
+			target: '#svelte'
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
