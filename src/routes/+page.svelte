@@ -24,7 +24,6 @@
 	async function fetchList() {
 		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
-		console.log(categoryList);
 		// 玄幻
 		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
@@ -151,7 +150,7 @@
 					class="w-full gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
+						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
 					</div>
 					<div class="flex flex-col p-2">
 						<h3 class="font-bold">{item.name}</h3>
@@ -173,7 +172,7 @@
 					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
+						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
 					</div>
 					<div class="flex flex-col p-2">
 						<h3 class="font-bold">{item.name}</h3>
@@ -195,7 +194,7 @@
 					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>
 					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
+						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
 					</div>
 					<div class="flex flex-col p-2">
 						<h3 class="font-bold">{item.name}</h3>
