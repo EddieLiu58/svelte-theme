@@ -40,7 +40,7 @@
 	}
 
 	async function updateList(item: string) {
-		goto(`/list/${item}`);
+		goto(`${base}/list/${item}`);
 		currentPage = 1;
 		list = [];
 		console.log(list);
