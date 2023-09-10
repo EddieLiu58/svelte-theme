@@ -1,5 +1,5 @@
 import type { EntryGenerator } from './$types';
 
 export const entries: EntryGenerator = () => {
-    return [{ nid: 'nid',chid: 'chid' }];
+    return [{ nid: 'index',chid: 'index' }];
 };
