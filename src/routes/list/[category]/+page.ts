@@ -9,11 +9,7 @@ export const load = async ({ params }) => {
   const content = await axios.get(`${baseUrl}/novels/category?page=1&size=24&cat=${category}`);
   item = content.data;
   
-  if (params.category !== '') {
-    return {
-      item,category
-    };
-  }
-
-  throw error(404, 'Not found');
+  return {
+    item,category
+  };
 };

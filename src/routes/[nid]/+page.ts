@@ -14,11 +14,7 @@ export const load: PageLoad = async ({ params }) => {
   chaptersList = chapters.data;
   firstId = chapters.data[0].id;
   
-  if (params.nid !== '') {
-    return {
-      item,chaptersList,nid,firstId
-    };
-  }
- 
-  throw error(404, 'Not found');
+  return {
+    item,chaptersList,nid,firstId
+  };
 };
