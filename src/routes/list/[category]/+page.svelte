@@ -26,12 +26,14 @@
 	let cat = data.category;
 
 	async function fetchCategory() {
-		let category = await axios.get('/api/novels/category/list');
+		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
 	}
 
 	async function fetchList() {
-		const content = await axios.get(`/api/novels/category?page=${currentPage}&size=24&cat=${cat}`);
+		const content = await axios.get(
+			`${baseUrl}/novels/category?page=${currentPage}&size=24&cat=${cat}`
+		);
 		newBatch = content.data;
 		list = [...list, ...newBatch];
 	}

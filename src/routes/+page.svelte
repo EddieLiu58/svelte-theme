@@ -44,7 +44,7 @@
 </script>
 
 <h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-首頁</h1>
-<div class="mb-12 w-screen">
+<!-- <div class="mb-12 w-screen">
 	<Splide
 		options={{
 			type: 'loop',
@@ -83,7 +83,7 @@
 			</SplideSlide>
 		{/each}
 	</Splide>
-</div>
+</div> -->
 <div class="mx-auto grid max-w-full grid-cols-1 gap-y-8 px-4 md:max-w-6xl">
 	<div class="grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}

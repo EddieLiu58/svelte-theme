@@ -13,11 +13,11 @@
 	let currentPage = 1;
 	let cat = $page.url.searchParams.get('cat');
 	async function fetchCategory() {
-		let category = await axios.get('/api/novels/category/list');
+		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
 	}
 	async function fetchList() {
-		const content = await axios.get(`/api/novels?page=${currentPage}&size=24`);
+		const content = await axios.get(`${baseUrl}/novels?page=${currentPage}&size=24`);
 		newBatch = content.data;
 	}
 	onMount(() => {

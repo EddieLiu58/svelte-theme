@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit';
+import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 import axios from 'axios';
 export const ssr = false;
  /** @type {import('./$types').PageServerLoad} */
@@ -10,9 +11,9 @@ export const load: PageLoad = async ({ params }) => {
   let nid = params.nid;
   let prevId = '';
   let nextId = '';
-  const content = await axios.get(`/api/contents/id/${params.chid}`);
+  const content = await axios.get(`${PUBLIC_PROD_BASE_URL}/contents/id/${params.chid}`);
   item =  content.data[0];
-  const novels = await axios.get(`/api/novels?nid=${params.nid}`);
+  const novels = await axios.get(`${PUBLIC_PROD_BASE_URL}/novels?nid=${params.nid}`);
   novelsItem  =  novels.data[0];
   currentIndex = novelsItem.chapters_ids.findIndex((i:string) => i === params.chid )
   allIndex = novelsItem.chapters_ids.length;
