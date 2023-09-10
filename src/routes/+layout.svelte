@@ -26,7 +26,9 @@
 			class="z-50 flex h-auto w-full items-center justify-between bg-white px-4 transition duration-300"
 		>
 			<div>
-				<a href={base}><img src="{base}/images/logo.png" alt="logo" width="120" height="120" /></a>
+				<a href="{base}/"
+					><img src="{base}/images/logo.png" alt="logo" width="120" height="120" /></a
+				>
 			</div>
 			<div class="grid grid-cols-2 gap-2">
 				<div class="text-center text-xl font-bold text-[#fb7d67]">

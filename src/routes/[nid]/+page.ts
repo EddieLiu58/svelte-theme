@@ -14,7 +14,7 @@ export const load: PageLoad = async ({ params }) => {
   chaptersList = chapters.data;
   firstId = chapters.data[0].id;
   
-  if (item) {
+  if (params.nid !== '') {
     return {
       item,chaptersList,nid,firstId
     };

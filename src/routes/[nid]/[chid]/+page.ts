@@ -20,7 +20,7 @@ export const load: PageLoad = async ({ params }) => {
   prevId = novelsItem.chapters_ids[currentIndex - 1];
   nextId  = novelsItem.chapters_ids[currentIndex + 1];
   
-  if (item) {
+  if (params.nid !== '' && params.chid !== '') {
     return {
       item,novelsItem,currentIndex,allIndex,nid,prevId,nextId
     };
