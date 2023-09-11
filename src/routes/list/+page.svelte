@@ -12,7 +12,6 @@
 	let newBatch: Array<{ id: string; name: string; author: string; introduction: string }> = [];
 	let categoryList: Array<string> = [];
 	let currentPage = 1;
-	let cat = $page.url.searchParams.get('cat');
 	async function fetchCategory() {
 		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
