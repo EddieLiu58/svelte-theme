@@ -4,13 +4,14 @@
 	"private": true,
   "author": "EddieLiu <eddieliu58@gmail.com>",
   "license": "MIT",
-	"workspaces": [ "site/*"],
+	"workspaces": [ "apps/*","packages/*"],
 	"scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
+  "type": "module",
   "devDependencies": {
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.8.0",
