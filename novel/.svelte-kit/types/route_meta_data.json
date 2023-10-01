@@ -1,0 +1,24 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/list": [
+		"src/routes/+layout.ts"
+	],
+	"/list/[category]": [
+		"src/routes/list/[category]/+page.ts",
+		"src/routes/list/[category]/+page.server.ts",
+		"src/routes/+layout.ts"
+	],
+	"/[nid]": [
+		"src/routes/[nid]/+page.ts",
+		"src/routes/[nid]/+page.server.ts",
+		"src/routes/+layout.ts"
+	],
+	"/[nid]/[chid]": [
+		"src/routes/[nid]/[chid]/+page.ts",
+		"src/routes/[nid]/[chid]/+page.server.ts",
+		"src/routes/+layout.ts"
+	]
+}
