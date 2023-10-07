@@ -20,6 +20,13 @@
 </script>
 
 <svelte:window />
+<svelte:head>
+	<script
+		async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
+		crossorigin="anonymous"
+	></script>
+</svelte:head>
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
 		<header
@@ -41,7 +48,7 @@
 		</header>
 	</Headroom>
 	<div class="mt-[120px] w-full"><slot /></div>
-	<footer class="mt-12 flex flex-col items-center bg-footer p-4">
+	<footer class="bg-footer mt-12 flex flex-col items-center p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">服務條款</span></a
