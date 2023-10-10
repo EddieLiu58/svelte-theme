@@ -42,7 +42,7 @@
 			</div>
 		</header>
 	</Headroom>
-	<div class="mx-auto mt-[120px] w-full max-w-5xl"><slot /></div>
+	<div class="mx-auto mt-[120px] w-full max-w-6xl px-6 md:px-16 xl:px-0"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_self" rel="noreferrer" href="/" class="text-center"

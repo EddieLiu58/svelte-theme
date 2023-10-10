@@ -49,7 +49,7 @@
 </script>
 
 <h1 class="hidden text-3xl font-bold text-red-300">MEME-首頁</h1>
-<div class="px-6 pt-6">
+<div class="pt-6">
 	<h2 class="text-xl font-bold md:text-2xl">熱門搜尋</h2>
 	<Splide
 		options={{
@@ -97,7 +97,7 @@
 		{/each}
 	</Splide>
 </div>
-<div class="mx-auto grid grid-cols-1 gap-y-8 px-6">
+<div class="mx-auto grid grid-cols-1 gap-y-8">
 	<div class="session1 relative">
 		<h2 class="mb-6 text-xl font-bold md:text-2xl">精選 GIF</h2>
 		<div class="columns-2 gap-4 gap-x-4 md:columns-3 xl:columns-4">
