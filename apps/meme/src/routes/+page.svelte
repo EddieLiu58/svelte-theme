@@ -50,19 +50,19 @@
 
 <h1 class="hidden text-3xl font-bold text-red-300">MEME-首頁</h1>
 <div class="px-6 pt-6">
-	<h2 class="text-xl font-bold">熱門搜尋</h2>
+	<h2 class="text-xl font-bold md:text-2xl">熱門搜尋</h2>
 	<Splide
 		options={{
 			// type: 'loop',
 			// autoplay: true,
-			gap: '1.5rem',
+			gap: '1rem',
 			perPage: 5,
 			perMove: 1,
 			pagination: false,
 			classes: {
 				arrows: 'splide__arrows',
 				arrow:
-					'absolute bottom-0 top-0 z-10 w-8 flex cursor-pointer items-center justify-center  opacity-50',
+					'absolute bottom-0 top-0 z-10 w-4 flex cursor-pointer items-center justify-center  opacity-50 md:w-6',
 				prev: 'splide__arrow--prev left-0',
 				next: 'splide__arrow--next right-0',
 				pagination: 'splide__pagination bottom-0',
@@ -70,10 +70,13 @@
 			},
 			breakpoints: {
 				1280: {
-					perPage: 2
+					perPage: 4
 				},
 				768: {
-					perPage: 1
+					perPage: 3
+				},
+				480: {
+					perPage: 2
 				}
 			}
 		}}
@@ -88,7 +91,7 @@
 					>
 						<!-- <img src={item.image} class="w-full" alt="" /> -->
 					</div>
-					<span class="block font-bold">{hot.type}</span>
+					<span class="block text-xs font-bold md:text-sm">{hot.type}</span>
 				</a>
 			</SplideSlide>
 		{/each}
@@ -96,7 +99,7 @@
 </div>
 <div class="mx-auto grid grid-cols-1 gap-y-8 px-6">
 	<div class="session1 relative">
-		<h2 class="mb-3 text-xl font-bold">精選 GIF</h2>
+		<h2 class="mb-6 text-xl font-bold md:text-2xl">精選 GIF</h2>
 		<div class="columns-2 gap-4 gap-x-4 md:columns-3 xl:columns-4">
 			{#each gifList as item}
 				<div class=" mb-8 w-full break-inside-avoid">
@@ -110,5 +113,8 @@
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.gray.100);
+	}
+	:global(.splide) {
+		padding: 1.5rem 2rem 2rem;
 	}
 </style>
