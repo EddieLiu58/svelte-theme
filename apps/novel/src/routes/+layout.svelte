@@ -30,15 +30,15 @@
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
 		<header
-			class="z-50 flex h-auto w-full items-center justify-between bg-white px-4 transition duration-300"
+			class="z-50 flex h-auto w-full items-center justify-between bg-[#292929] px-4 transition duration-300"
 		>
 			<div>
 				<a href="{base}/"
-					><img src="{base}/images/logo.png" alt="logo" width="120" height="120" /></a
+					><img src="{base}/images/novel-logo.svg" alt="logo" width="120" height="120" /></a
 				>
 			</div>
 			<div class="grid grid-cols-2 gap-2">
-				<div class="text-center text-xl font-bold text-[#fb7d67]">
+				<div class="text-center text-xl font-bold text-white">
 					<a href="{base}/list">搜尋</a>
 				</div>
 				<!-- <div class="text-center text-xl font-bold text-[#fb7d67]">
@@ -48,7 +48,7 @@
 		</header>
 	</Headroom>
 	<div class="mt-[120px] w-full"><slot /></div>
-	<footer class="bg-footer mt-12 flex flex-col items-center p-4">
+	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">服務條款</span></a
@@ -60,7 +60,7 @@
 		</div>
 		<div class="item-center flex flex-col justify-center">
 			<div class="text-center">
-				<span class="text-white">躺著賺有限公司</span><span class="text-white"
+				<span class="text-white">自由創作者股份有限公司</span><span class="text-white"
 					>© All Rights Reserved</span
 				>
 			</div>

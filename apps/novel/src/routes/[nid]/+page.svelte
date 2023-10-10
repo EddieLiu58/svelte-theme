@@ -13,7 +13,6 @@
 </script>
 
 <div class="mx-auto grid">
-	<h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-內容頁</h1>
 	<div class="w-full bg-[url('/images/blob.png')] bg-cover bg-no-repeat">
 		<div class="w-full backdrop-blur-lg">
 			<div class="mx-auto grid min-h-[500px] w-full max-w-3xl grid-cols-2 gap-12 py-16">
@@ -22,7 +21,7 @@
 				</div>
 				<div class="flex flex-col justify-between text-white">
 					<div class="grid gap-4">
-						<h2 class=" text-4xl">{data.item.name}</h2>
+						<h1 class=" text-4xl">{data.item.name}</h1>
 						<span class="text-lg">作者: {data.item.author}</span>
 						<span class="text-lg">分類: {data.item.category}</span>
 						<p class="text-lg">{data.item.introduction}</p>

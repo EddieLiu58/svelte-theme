@@ -84,7 +84,7 @@
 	</Splide>
 </div> -->
 <div class="mx-auto grid max-w-full grid-cols-1 gap-y-8 px-4 md:max-w-6xl">
-	<div class="grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
+	<div class="mt-6 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
 			<a
 				href="{base}/list/{category}"

@@ -30,11 +30,11 @@
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
 		<header
-			class="z-50 flex h-auto w-full items-center justify-between bg-white px-4 transition duration-300"
+			class="z-50 flex h-auto w-full items-center justify-between bg-[#292929] px-4 transition duration-300"
 		>
 			<div>
 				<a href="{base}/"
-					><img src="{base}/gif/logo-white.gif" alt="logo" width="120" height="120" /></a
+					><img src="{base}/images/meme-logo.svg" alt="logo" width="120" height="120" /></a
 				>
 			</div>
 			<div class="grid grid-cols-2 gap-2">
@@ -45,7 +45,7 @@
 		</header>
 	</Headroom>
 	<div class="mt-[120px] w-full"><slot /></div>
-	<footer class="bg-footer mt-12 flex flex-col items-center p-4">
+	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
 		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
 			<a target="_self" rel="noreferrer" href="/" class="text-center"
 				><span class="text-white">服務條款</span></a
