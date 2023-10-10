@@ -34,7 +34,7 @@
 		>
 			<div>
 				<a href="{base}/"
-					><img src="{base}/images/novel-logo.svg" alt="logo" width="120" height="120" /></a
+					><img src="{base}/gif/novel-logo.gif" alt="logo" width="120" height="120" /></a
 				>
 			</div>
 			<div class="grid grid-cols-2 gap-2">
