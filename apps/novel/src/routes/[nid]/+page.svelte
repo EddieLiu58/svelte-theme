@@ -15,18 +15,18 @@
 <div class="mx-auto grid">
 	<div class="w-full bg-[url('/images/blob.png')] bg-cover bg-no-repeat">
 		<div class="w-full backdrop-blur-lg">
-			<div class="mx-auto grid min-h-[500px] w-full max-w-3xl grid-cols-2 gap-12 py-16">
-				<div class="overflow-hidden rounded-md">
+			<div
+				class="mx-auto grid min-h-[500px] w-full max-w-3xl grid-cols-1 gap-12 px-6 py-16 md:grid-cols-[1fr_4fr]"
+			>
+				<div class="flex justify-center overflow-hidden rounded-md md:block">
 					<img src="{baseUrl}/images/{data.nid}.jpg" class="w-auto" alt="" />
 				</div>
-				<div class="flex flex-col justify-between text-white">
-					<div class="grid gap-4">
-						<h1 class=" text-4xl">{data.item.name}</h1>
-						<span class="text-lg">作者: {data.item.author}</span>
-						<span class="text-lg">分類: {data.item.category}</span>
-						<p class="text-lg">{data.item.introduction}</p>
-					</div>
-					<div class="grid w-full grid-cols-2 gap-4">
+				<div class="md: flex flex-col items-center gap-4 text-white md:items-start">
+					<h1 class="text-3xl md:text-4xl">{data.item.name}</h1>
+					<span class="text-lg">作者: {data.item.author}</span>
+					<span class="text-lg">分類: {data.item.category}</span>
+					<p class="text-lg">{data.item.introduction}</p>
+					<div class="mt-4 grid w-full grid-cols-2 gap-4 md:max-w-[70%]">
 						<a
 							href="{base}/{data.item.id}/{data.firstId}"
 							class="w-full rounded-[180px] border-2 border-solid border-white p-4 text-center transition-all hover:bg-white hover:text-gray-400"
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mx-auto mt-9 flex w-full max-w-4xl flex-col gap-4 px-4">
+	<div class="mx-auto mt-9 flex w-full max-w-4xl flex-col gap-4 px-6">
 		<h2 class="text-2xl font-bold">章節</h2>
 		<div class="grid grid-cols-1 gap-8">
 			{#each data.chaptersList as chapter}

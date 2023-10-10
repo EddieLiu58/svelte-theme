@@ -33,11 +33,9 @@
 			class="z-50 flex h-auto w-full items-center justify-between bg-[#292929] px-4 transition duration-300"
 		>
 			<div>
-				<a href="{base}/"
-					><img src="{base}/gif/novel-logo.gif" alt="logo" width="120" height="120" /></a
-				>
+				<a href="{base}/"><img src="{base}/gif/logo.gif" alt="logo" width="120" height="120" /></a>
 			</div>
-			<div class="grid grid-cols-2 gap-2">
+			<div class="grid grid-cols-1 gap-2">
 				<div class="text-center text-xl font-bold text-white">
 					<a href="{base}/list">搜尋</a>
 				</div>
@@ -103,6 +101,9 @@
 	}
 	:global(div.svelte-1ql6gaa) {
 		z-index: 30;
+	}
+	:global(html) {
+		background-color: theme(colors.gray.100);
 	}
 	:global(.splide__pagination__page.is-active) {
 		background-color: rgba(0, 0, 0, 0.8);

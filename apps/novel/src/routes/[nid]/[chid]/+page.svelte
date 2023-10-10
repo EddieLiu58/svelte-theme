@@ -12,7 +12,7 @@
 </script>
 
 <div class="mx-auto grid">
-	<div class="mx-auto w-full max-w-4xl px-4">
+	<div class="mx-auto mt-6 w-full max-w-4xl px-6">
 		<a href="{base}/{data.nid}" class="mb-8 flex items-center text-xl"
 			><svg
 				stroke="currentColor"
