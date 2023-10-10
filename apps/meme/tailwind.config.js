@@ -8,6 +8,9 @@ export default {
 				transparent: 'transparent',
 				footer: '#2d3748',
 				search: '#f7fafc'
+			},
+			gridTemplateColumns: {
+				fill: 'repeat(auto-fill, minmax(250px, 1fr))'
 			}
 		},
 		screens: {
