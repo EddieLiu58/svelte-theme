@@ -44,15 +44,6 @@
 	</Headroom>
 	<div class="mx-auto mt-[120px] w-full max-w-6xl px-6 md:px-16 xl:px-0"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
-		<div class="mb-8 mt-8 grid w-full max-w-2xl grid-flow-col">
-			<a target="_self" rel="noreferrer" href="/" class="text-center"
-				><span class="text-white">服務條款</span></a
-			><a target="_self" rel="noreferrer" href="/" class="text-center"
-				><span class="text-white">隱私政策</span></a
-			><a target="_blank" rel="noreferrer" href="/" class="text-center"
-				><span class="text-white">常見問題</span></a
-			>
-		</div>
 		<div class="item-center flex flex-col justify-center">
 			<div class="text-center">
 				<span class="text-white">自由創作者股份有限公司</span><span class="text-white"
