@@ -102,7 +102,7 @@
 		<h2 class="mb-6 text-xl font-bold md:text-2xl">精選 GIF</h2>
 		<div class="columns-2 gap-4 gap-x-4 md:columns-3 xl:columns-4">
 			{#each gifList as item}
-				<div class=" mb-8 w-full break-inside-avoid">
+				<div class=" mb-4 w-full break-inside-avoid">
 					<img src={item.image} class="w-full" alt="" />
 				</div>
 			{/each}
