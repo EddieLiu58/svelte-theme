@@ -1,11 +1,14 @@
 {
   "name": "global",
   "version": "1.0.0",
-	"private": true,
+  "private": true,
   "author": "EddieLiu <eddieliu58@gmail.com>",
   "license": "MIT",
-	"workspaces": [ "apps/*","packages/*"],
-	"scripts": {
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -13,14 +16,14 @@
   },
   "type": "module",
   "devDependencies": {
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-svelte": "^2.30.0",
-		"eslint-plugin-tailwindcss": "^3.13.0",
-		"prettier": "^2.8.8",
-		"prettier-plugin-svelte": "^2.10.1",
-		"prettier-plugin-tailwindcss": "^0.4.1",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-svelte": "^2.30.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.1",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "tsconfig": "*",
-    "turbo": "latest"
+    "turbo": "^1.10.15"
   }
 }
