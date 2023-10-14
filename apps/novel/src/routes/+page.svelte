@@ -5,9 +5,8 @@
 	import { onMount } from 'svelte';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	import { base } from '$app/paths';
-
+	import CustomSplide from '../components/CustomSplide.svelte';
 	const baseUrl = PUBLIC_PROD_BASE_URL;
-
 	const topList = [
 		{ url: '/', image: `${base}/images/topSlide1.webp` },
 		{ url: '/', image: `${base}/images/topSlide2.webp` },
@@ -94,118 +93,16 @@
 		{/each}
 	</div>
 	<div class="session1 relative">
-		<h2 class="mb-3 text-xl font-bold">玄幻</h2>
-		<Splide
-			options={{
-				omitEnd: true,
-				focus: 0,
-				gap: '1rem',
-				perPage: 6,
-				pagination: false,
-				classes: {
-					arrows: 'splide__arrows',
-					arrow:
-						'absolute bottom-0 top-0 z-10 w-12 flex cursor-pointer items-center justify-center opacity-50',
-					prev: 'splide__arrow--prev bg-gradient-to-r from-gray-600 to-gray-0 left-0',
-					next: 'splide__arrow--next bg-gradient-to-l from-gray-600 to-gray-0 right-0',
-					pagination: 'splide__pagination bottom-0',
-					page: 'splide__pagination__page bg-gray-500'
-				},
-				breakpoints: {
-					1200: {
-						perPage: 4
-					},
-					1024: {
-						perPage: 3
-					},
-					768: {
-						perPage: 2
-					}
-				}
-			}}
-			aria-label="My Favorite Images"
-		>
-			{#each fantasylList as item}
-				<SplideSlide>
-					<a href="{base}/{item.id}" class="gap-2">
-						<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-							<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
-						</div>
-						<div class="flex flex-col p-2">
-							<h3 class="font-bold">{item.name}</h3>
-							<span>作者: {item.author}</span>
-							<p class="line-clamp-2 text-ellipsis text-xs text-gray-600">{item.introduction}</p>
-						</div>
-					</a>
-				</SplideSlide>
-			{/each}
-		</Splide>
+		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
 	<div class="session2 relative">
-		<h2 class="mb-3 text-xl font-bold">科幻</h2>
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-			{#each scienceList as item}
-				<a
-					href="{base}/{item.id}"
-					class="w-full gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
-				>
-					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
-					</div>
-					<div class="flex flex-col p-2">
-						<h3 class="font-bold">{item.name}</h3>
-						<span>作者: {item.author}</span>
-						<p class="line-clamp-2 text-ellipsis text-xs">
-							{item.introduction}
-						</p>
-					</div>
-				</a>
-			{/each}
-		</div>
+		<CustomSplide label={'科幻'} list={scienceList} />
 	</div>
 	<div class="session3 relative">
-		<h2 class="mb-3 text-xl font-bold">校園</h2>
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-			{#each schoolList as item}
-				<a
-					href="{base}/{item.id}"
-					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
-				>
-					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
-					</div>
-					<div class="flex flex-col p-2">
-						<h3 class="font-bold">{item.name}</h3>
-						<span>作者: {item.author}</span>
-						<p class="line-clamp-2 text-ellipsis text-xs">
-							{item.introduction}
-						</p>
-					</div>
-				</a>
-			{/each}
-		</div>
+		<CustomSplide label={'校園'} list={schoolList} />
 	</div>
 	<div class="session4 relative">
-		<h2 class="mb-3 text-xl font-bold">青春</h2>
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-			{#each youthlList as item}
-				<a
-					href="{base}/{item.id}"
-					class="gap-2 rounded-3xl border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
-				>
-					<div class="max-h-[240px] w-full overflow-hidden rounded-md">
-						<!-- <img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" /> -->
-					</div>
-					<div class="flex flex-col p-2">
-						<h3 class="font-bold">{item.name}</h3>
-						<span>作者: {item.author}</span>
-						<p class="line-clamp-2 text-ellipsis text-xs">
-							{item.introduction}
-						</p>
-					</div>
-				</a>
-			{/each}
-		</div>
+		<CustomSplide label={'青春'} list={youthlList} />
 	</div>
 </div>
 
