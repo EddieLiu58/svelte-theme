@@ -32,7 +32,8 @@
 		<header class="z-50 w-full bg-[#292929] transition duration-300">
 			<div class="mx-auto flex h-auto w-full items-center justify-between px-6 md:max-w-6xl">
 				<div>
-					<a href="{base}/"><img src="{base}/gif/logo.gif" alt="logo" width="120" height="120" /></a
+					<a href="{base}/"
+						><img src="{base}/images/logo.webp" alt="logo" width="120" height="120" /></a
 					>
 				</div>
 				<div class="grid grid-cols-1 gap-2">
