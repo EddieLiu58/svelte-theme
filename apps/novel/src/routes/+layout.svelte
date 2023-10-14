@@ -46,7 +46,7 @@
 			</div>
 		</header>
 	</Headroom>
-	<div class="mt-[120px] w-full"><slot /></div>
+	<div class="mx-auto mt-[120px]"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
 		<div class="item-center flex flex-col justify-center">
 			<div class="text-center">
