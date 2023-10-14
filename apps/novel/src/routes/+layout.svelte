@@ -29,19 +29,20 @@
 </svelte:head>
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
-		<header
-			class="z-50 flex h-auto w-full items-center justify-between bg-[#292929] px-4 transition duration-300"
-		>
-			<div>
-				<a href="{base}/"><img src="{base}/gif/logo.gif" alt="logo" width="120" height="120" /></a>
-			</div>
-			<div class="grid grid-cols-1 gap-2">
-				<div class="text-center text-xl font-bold text-white">
-					<a href="{base}/list">搜尋</a>
+		<header class="z-50 w-full bg-[#292929] transition duration-300">
+			<div class="mx-auto flex h-auto w-full items-center justify-between px-6 md:max-w-6xl">
+				<div>
+					<a href="{base}/"><img src="{base}/gif/logo.gif" alt="logo" width="120" height="120" /></a
+					>
 				</div>
-				<!-- <div class="text-center text-xl font-bold text-[#fb7d67]">
+				<div class="grid grid-cols-1 gap-2">
+					<div class="text-center text-xl font-bold text-white">
+						<a href="{base}/list">搜尋</a>
+					</div>
+					<!-- <div class="text-center text-xl font-bold text-[#fb7d67]">
 					<button on:click={OpenMenu}>目錄</button>
 				</div> -->
+				</div>
 			</div>
 		</header>
 	</Headroom>
