@@ -15,10 +15,13 @@
 		{ url: '/', image: `${base}/images/topSlide5.webp` }
 	];
 	let categoryList: Array<string> = [];
-	let schoolList: Array<string> = [];
-	let youthlList: Array<string> = [];
+	// let schoolList: Array<string> = [];
+	// let youthlList: Array<string> = [];
 	let fantasylList: Array<string> = [];
-	let scienceList: Array<string> = [];
+	// let scienceList: Array<string> = [];
+	let xianXiaList: Array<string> = [];
+	let suspenseList: Array<string> = [];
+	let martialArtsList: Array<string> = [];
 
 	async function fetchList() {
 		let category = await axios.get(`${baseUrl}/novels/category/list`);
@@ -27,14 +30,23 @@
 		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
 		// 科幻
-		let science = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=科幻`);
-		scienceList = [...scienceList, ...science.data];
+		// let science = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=科幻`);
+		// scienceList = [...scienceList, ...science.data];
 		// 校園
-		let school = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=校園`);
-		schoolList = [...schoolList, ...school.data];
+		// let school = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=校園`);
+		// schoolList = [...schoolList, ...school.data];
 		// 青春
-		let youth = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=青春`);
-		youthlList = [...youthlList, ...youth.data];
+		// let youth = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=青春`);
+		// youthlList = [...youthlList, ...youth.data];
+		// 仙俠
+		let xianXia = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=仙俠`);
+		xianXiaList = [...xianXiaList, ...xianXia.data];
+		// 懸疑
+		let suspense = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=懸疑`);
+		suspenseList = [...suspenseList, ...suspense.data];
+		// 武俠
+		let martialArts = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=武俠`);
+		martialArtsList = [...martialArtsList, ...martialArts.data];
 	}
 	onMount(() => {
 		fetchList();
@@ -93,16 +105,16 @@
 		{/each}
 	</div>
 	<div class="session1 relative">
-		<CustomSplide label={'玄幻'} list={fantasylList} />
+		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
 	<div class="session2 relative">
-		<CustomSplide label={'科幻'} list={scienceList} />
+		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
 	<div class="session3 relative">
-		<CustomSplide label={'校園'} list={schoolList} />
+		<CustomSplide label={'懸疑'} list={suspenseList} />
 	</div>
 	<div class="session4 relative">
-		<CustomSplide label={'青春'} list={youthlList} />
+		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
 </div>
 
