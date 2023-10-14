@@ -26,9 +26,18 @@
 	async function fetchList() {
 		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
+		// 仙俠
+		let xianXia = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=仙俠`);
+		xianXiaList = [...xianXiaList, ...xianXia.data];
 		// 玄幻
 		let fantasy = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=玄幻`);
 		fantasylList = [...fantasylList, ...fantasy.data];
+		// 懸疑
+		let suspense = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=懸疑`);
+		suspenseList = [...suspenseList, ...suspense.data];
+		// 武俠
+		let martialArts = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=武俠`);
+		martialArtsList = [...martialArtsList, ...martialArts.data];
 		// 科幻
 		// let science = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=科幻`);
 		// scienceList = [...scienceList, ...science.data];
@@ -38,15 +47,6 @@
 		// 青春
 		// let youth = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=青春`);
 		// youthlList = [...youthlList, ...youth.data];
-		// 仙俠
-		let xianXia = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=仙俠`);
-		xianXiaList = [...xianXiaList, ...xianXia.data];
-		// 懸疑
-		let suspense = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=懸疑`);
-		suspenseList = [...suspenseList, ...suspense.data];
-		// 武俠
-		let martialArts = await axios.get(`${baseUrl}/novels/category?page=1&size=12&cat=武俠`);
-		martialArtsList = [...martialArtsList, ...martialArts.data];
 	}
 	onMount(() => {
 		fetchList();
