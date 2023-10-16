@@ -29,7 +29,7 @@
 						<p class="text-lg">簡介： {data.item.introduction}</p>
 						<div class="mt-4 grid w-full grid-cols-2 gap-4 md:max-w-[40%]">
 							<a
-								href="{base}/{data.item.id}/{data.firstId}"
+								href="{base}/nid/{data.item.id}/cid/{data.firstId}"
 								class="w-full rounded-[180px] border-solid bg-gradient-to-r from-stone-500 to-stone-700 p-4 text-center text-white transition-all"
 								>開始閱讀</a
 							>
@@ -50,7 +50,7 @@
 		<h2 class="mb-4 text-2xl font-bold">章節</h2>
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 			{#each data.chaptersList as chapter}
-				<a href="{base}/{data.nid}/{chapter.id}" class="flex gap-2 text-lg">
+				<a href="{base}/nid/{data.nid}/cid/{chapter.id}" class="flex gap-2 text-lg">
 					{chapter.title}
 				</a>
 			{/each}

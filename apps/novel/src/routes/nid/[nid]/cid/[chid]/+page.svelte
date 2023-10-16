@@ -13,7 +13,7 @@
 
 <div class="mx-auto grid">
 	<div class="mx-auto mt-6 w-full max-w-6xl md:px-6">
-		<a href="{base}/{data.nid}" class="mb-8 ml-8 flex items-center text-xl md:ml-0"
+		<a href="{base}/nid/{data.nid}" class="mb-8 ml-8 flex items-center text-xl md:ml-0"
 			><svg
 				stroke="currentColor"
 				fill="none"
@@ -35,12 +35,12 @@
 		<div class="mr-8 mt-8 flex justify-between md:mr-0">
 			<div>
 				{#if data.currentIndex !== 0}
-					<a href="{base}/{data.nid}/{data.prevId}" class="text-xl font-bold">上一章</a>
+					<a href="{base}/nid/{data.nid}/cid/{data.prevId}" class="text-xl font-bold">上一章</a>
 				{/if}
 			</div>
 			<div>
 				{#if data.currentIndex !== data.allIndex}
-					<a href="{base}/{data.nid}/{data.nextId}" class="text-xl font-bold">下一章</a>
+					<a href="{base}/nid/{data.nid}/cid/{data.nextId}" class="text-xl font-bold">下一章</a>
 				{/if}
 			</div>
 		</div>

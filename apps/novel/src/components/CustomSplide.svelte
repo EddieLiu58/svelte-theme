@@ -41,7 +41,7 @@
 >
 	{#each list as item}
 		<SplideSlide>
-			<a href="{base}/{item.id}" class="gap-2">
+			<a href="{base}/nid/{item.id}" class="gap-2">
 				<div class="max-h-[240px] w-full overflow-hidden rounded-md">
 					<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
 				</div>
