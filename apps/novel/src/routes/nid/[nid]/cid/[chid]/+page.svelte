@@ -29,7 +29,7 @@
 			<span class="ml-2">{data.item.novel_name}</span>
 		</a>
 		<div class="bg-white px-12 pb-12 pt-6 md:rounded-lg">
-			<h1 class="mb-8 text-3xl font-bold">{data.item.title}</h1>
+			<h1 class="mb-8 text-3xl font-bold">{data.item.novel_name} - {data.item.title}</h1>
 			<div class="grid grid-cols-1 gap-8">{@html data.item.content}</div>
 		</div>
 		<div class="mr-8 mt-8 flex justify-between md:mr-0">

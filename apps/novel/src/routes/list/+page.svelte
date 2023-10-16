@@ -28,7 +28,7 @@
 </script>
 
 <div class="mx-auto grid max-w-6xl px-4">
-	<h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-列表頁1</h1>
+	<h1 class="hidden text-3xl font-bold text-red-300">inovels list - 自由創作者股份有限公司</h1>
 	<div class="mt-8">
 		<input
 			type="search"

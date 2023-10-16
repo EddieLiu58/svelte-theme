@@ -1,9 +1,10 @@
 import { error,redirect } from '@sveltejs/kit';
 import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
+import type { MetaTagsProps } from 'svelte-meta-tags'; // Import type for meta tags properties.
 import axios from 'axios';
 export const ssr = false;
  /** @type {import('./$types').PageServerLoad} */
-export const load: PageLoad = async ({ params }) => {
+export const load: PageLoad = async ({ url,params }) => {
   let item: Array<string> = [];
   let chaptersList: Array<string> = [];
   let nid = params.nid;
@@ -17,7 +18,25 @@ export const load: PageLoad = async ({ params }) => {
   }catch(err) {
     throw redirect(302, '/');
   } 
+    // Define meta tags for this specific child page.
+  const metaTags: MetaTagsProps = Object.freeze({
+    title: `${item.name}`, // Page-specific title.
+    description: `${item.introduction}`, // This description will override the default.
+    openGraph: {
+      // OpenGraph meta tags specific to this page.
+      type: 'website',
+      url: new URL(url.pathname, url.origin).href,
+      title: `${item.name} - 自由創作者股份有限公司`,
+      description: `${item.introduction}`,
+      images: [ {
+        url: `${PUBLIC_PROD_BASE_URL}/images/${nid}.jpg`,
+        width: 800,
+        height: 600,
+        alt: `${item.name}封面圖`
+      },]
+    }
+  });
   return {
-    item,chaptersList,nid,firstId
+    item,chaptersList,nid,firstId,metaTagsChild: metaTags 
   };
 };

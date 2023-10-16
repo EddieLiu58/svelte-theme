@@ -23,6 +23,7 @@
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.1",
     "prettier-plugin-tailwindcss": "^0.4.1",
+    "svelte-meta-tags": "^3.0.4",
     "tsconfig": "*",
     "turbo": "^1.10.15"
   }

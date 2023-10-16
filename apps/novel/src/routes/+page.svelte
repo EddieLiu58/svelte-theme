@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 	import axios from 'axios';
 	import { onMount } from 'svelte';
@@ -53,7 +52,7 @@
 	});
 </script>
 
-<h1 class="hidden text-3xl font-bold text-red-300">大家一起躺著賺-首頁</h1>
+<h1 class="hidden text-3xl font-bold text-red-300">inovels - 自由創作者股份有限公司</h1>
 <!-- <div class="mb-12 w-screen">
 	<Splide
 		options={{

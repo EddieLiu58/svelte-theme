@@ -1,5 +1,7 @@
 <script lang="ts">
 	// @ts-nocheck
+	import { MetaTags } from 'svelte-meta-tags';
+	import { page } from '$app/stores'; // Import the page store to access route-specific data.
 	import { slide } from 'svelte/transition';
 	import { fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
@@ -12,13 +14,23 @@
 	import '@fontsource/noto-sans-tc/500.css';
 	import '@fontsource/noto-sans-tc/700.css';
 	import '@fontsource/noto-sans-tc/900.css';
-
+	export let data; // Exported so that child components/pages can provide data.
+	// Create a reactive statement to compute meta tags.
+	$: metaTags = {
+		titleTemplate: '%s - 自由創作者股份有限公司', // Default title template.
+		description:
+			'輕便閱小說對於通勤，打發時間的你，是得意的最佳夥伴，輕鬆掌握各類型小說書籍，只讓你沉浸在文字的虛擬世界裡。', // Default description.
+		canonical: $page.url,
+		languageAlternates: { hrefLang: 'zh-hant', href: 'https://www.inovels.click/' },
+		...$page.data.metaTagsChild // Override with child page meta tags if they exist.
+	};
 	let MenutranslateX = false;
 	function OpenMenu() {
 		MenutranslateX = !MenutranslateX;
 	}
 </script>
 
+<MetaTags {...metaTags} />
 <svelte:window />
 <svelte:head>
 	<script
