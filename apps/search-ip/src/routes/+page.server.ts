@@ -2,6 +2,7 @@ import type { MetaTagsProps } from 'svelte-meta-tags'; // Import type for meta t
 /** @type {import('@sveltejs/kit').PageLoad} */
 export function load ({ url,request }) {
   const requestIp = request.headers.get('x-forwarded-for') || '';
+  const requestIpv6 = request.headers.get('x-real-ip') || '';
   // Define meta tags for this specific child page.
   const metaTags: MetaTagsProps = Object.freeze({
     title: 'ip搜尋', // Page-specific title.
@@ -24,5 +25,6 @@ export function load ({ url,request }) {
   return {
     metaTagsChild: metaTags, // Return meta tags so they can be consumed by layout.svelte.
     requestIp,
+    requestIpv6
   };
 };

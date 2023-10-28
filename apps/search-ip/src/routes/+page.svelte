@@ -9,16 +9,20 @@
 	let IPV6List = {};
 	let currentIP = data.requestIp.split(',')[0];
 	let coords: Array<String> = [];
+	let onceClicked = false;
 	console.log(data);
 	async function fetchList() {
-		let getIPV4 = await axios.get(
-			`https://api.itool.click/itools/ip-range/v4?ip=${currentIP}&uid=test`
-		);
-		IPV4List = { ...getIPV4.data };
-		let getIPV6 = await axios.get(
-			`https://api.itool.click/itools/ip-range/v6?ip=${currentIP}&uid=test`
-		);
-		IPV6List = { ...getIPV6.data };
+		if (!onceClicked) {
+			let getIPV4 = await axios.get(
+				`https://api.itool.click/itools/ip-range/v4?ip=${currentIP}&uid=test`
+			);
+			IPV4List = { ...getIPV4.data };
+			let getIPV6 = await axios.get(
+				`https://api.itool.click/itools/ip-range/v6?ip=${currentIP}&uid=test`
+			);
+			IPV6List = { ...getIPV6.data };
+			onceClicked = true;
+		}
 	}
 </script>
 
