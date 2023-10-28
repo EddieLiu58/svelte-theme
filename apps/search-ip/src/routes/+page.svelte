@@ -1,20 +1,23 @@
 <script lang="ts">
 	import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 	import axios from 'axios';
-	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	import Geolocation from 'svelte-geolocation';
 	/** @type {import('./$types').PageData} */
 	export let data;
-	const baseUrl = PUBLIC_PROD_BASE_URL;
 
 	let IPV4List = {};
 	let IPV6List = {};
 	let currentIP = data.requestIp;
 	let coords: Array<String> = [];
+	console.log(data);
 	async function fetchList() {
-		let getIPV4 = await axios.get(`${baseUrl}/itools/ip-range/v4?ip=${currentIP}&uid=test`);
+		let getIPV4 = await axios.get(
+			`https://api.itool.click/itools/ip-range/v4?ip=${currentIP}&uid=test`
+		);
 		IPV4List = { ...getIPV4.data };
-		let getIPV6 = await axios.get(`${baseUrl}/itools/ip-range/v6?ip=${currentIP}&uid=test`);
+		let getIPV6 = await axios.get(
+			`https://api.itool.click/itools/ip-range/v6?ip=${currentIP}&uid=test`
+		);
 		IPV6List = { ...getIPV6.data };
 	}
 </script>
