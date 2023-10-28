@@ -12,9 +12,9 @@ export function load ({ url,request }) {
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
       title: 'ip搜尋 - 自由創作者股份有限公司',
-      description: '',
+      description: 'DNM提供免費 IP 搜尋工具，能找到您的 IP 和其他相關資訊。',
       images: [ {
-        url: `${url}images/logo.webp`,
+        url: `${url}images/ip-logo.svg`,
         width: 800,
         height: 600,
         alt: 'ip搜尋 logo alt'

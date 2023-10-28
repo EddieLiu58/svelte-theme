@@ -31,12 +31,12 @@
 >
 	<div class="mx-auto grid w-full grid-cols-1 gap-4 py-12 md:max-w-5xl md:grid-cols-2">
 		<div class="">
-			<h1 class="text-6xl font-bold">IP搜尋</h1>
+			<h1 class="text-center text-6xl font-bold md:text-left">IP搜尋</h1>
 			<div class="mt-10">
-				<div class="">
+				<div class="text-center md:text-left">
 					<label for="1" class=" text-sm text-gray-600">請輸入您想知道的 IP 位址：</label>
 				</div>
-				<div class="flex items-center">
+				<div class="flex flex-col items-center md:flex-row">
 					<div class="">
 						<input
 							type="text"
@@ -45,7 +45,7 @@
 							bind:value={currentIP}
 						/>
 					</div>
-					<div class="ml-4">
+					<div class="flex justify-center md:ml-4">
 						<button
 							class="rounded-full bg-orange-300 p-4 text-center text-white"
 							type="button"
@@ -53,7 +53,7 @@
 						>
 					</div>
 				</div>
-				<div class="mt-4">
+				<div class="mt-4 flex items-center text-center md:text-left">
 					<p class=" text-xs text-gray-600">
 						此網站所使用的 IP2Location LITE 數據來自於 <a href="https://lite.ip2location.com"
 							>https://lite.ip2location.com</a
