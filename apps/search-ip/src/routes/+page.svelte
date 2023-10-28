@@ -7,7 +7,7 @@
 
 	let IPV4List = {};
 	let IPV6List = {};
-	let currentIP = data.requestIp;
+	let currentIP = data.requestIp.split(',')[0];
 	let coords: Array<String> = [];
 	console.log(data);
 	async function fetchList() {

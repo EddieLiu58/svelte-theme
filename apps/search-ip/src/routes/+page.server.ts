@@ -1,8 +1,7 @@
 import type { MetaTagsProps } from 'svelte-meta-tags'; // Import type for meta tags properties.
-import { requestIp } from "../hooks.server";
 /** @type {import('@sveltejs/kit').PageLoad} */
 export function load ({ url,request }) {
-  const ip = request.headers.get('x-forwarded-for') || '';
+  const requestIp = request.headers.get('x-forwarded-for') || '';
   // Define meta tags for this specific child page.
   const metaTags: MetaTagsProps = Object.freeze({
     title: 'ip搜尋', // Page-specific title.
@@ -25,6 +24,5 @@ export function load ({ url,request }) {
   return {
     metaTagsChild: metaTags, // Return meta tags so they can be consumed by layout.svelte.
     requestIp,
-    ip
   };
 };
