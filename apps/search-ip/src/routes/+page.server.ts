@@ -6,7 +6,7 @@ export function load ({ url,request }) {
   // Define meta tags for this specific child page.
   const metaTags: MetaTagsProps = Object.freeze({
     title: 'ip搜尋', // Page-specific title.
-    description: '', // This description will override the default.
+    description: 'DNM提供免費 IP 搜尋工具，能找到您的 IP 和其他相關資訊。', // This description will override the default.
     openGraph: {
       // OpenGraph meta tags specific to this page.
       type: 'website',
