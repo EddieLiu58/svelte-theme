@@ -6,21 +6,20 @@
 	export let data;
 
 	let IPV4List = {};
-	let IPV6List = {};
+	// let IPV6List = {};
 	let currentIP = data.requestIp.split(',')[0];
 	let coords: Array<String> = [];
 	let onceClicked = false;
-	console.log(data);
 	async function fetchList() {
 		if (!onceClicked) {
 			let getIPV4 = await axios.get(
 				`https://api.itool.click/itools/ip-range/v4?ip=${currentIP}&uid=test`
 			);
 			IPV4List = { ...getIPV4.data };
-			let getIPV6 = await axios.get(
-				`https://api.itool.click/itools/ip-range/v6?ip=${currentIP}&uid=test`
-			);
-			IPV6List = { ...getIPV6.data };
+			// let getIPV6 = await axios.get(
+			// 	`https://api.itool.click/itools/ip-range/v6?ip=${currentIP}&uid=test`
+			// );
+			// IPV6List = { ...getIPV6.data };
 			onceClicked = true;
 		}
 	}
@@ -76,7 +75,7 @@
 					</ul>
 				</div>
 			{/if}
-			{#if Object.keys(IPV6List).length > 0}
+			<!-- {#if Object.keys(IPV6List).length > 0}
 				<div class="mt-2">
 					<h2 class="text-base font-bold">IPv6</h2>
 					<ul class="mt-2">
@@ -87,7 +86,7 @@
 						{/each}
 					</ul>
 				</div>
-			{/if}
+			{/if} -->
 		</div>
 	</div>
 </section>
