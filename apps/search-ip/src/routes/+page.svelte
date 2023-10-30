@@ -2,6 +2,7 @@
 	import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 	import axios from 'axios';
 	import Geolocation from 'svelte-geolocation';
+	import { onMount } from 'svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -10,7 +11,7 @@
 	let currentIP = data.requestIp.split(',')[0];
 	let coords: Array<String> = [];
 	let onceClicked = false;
-	async function fetchList() {
+	async function fetchIP() {
 		if (!onceClicked) {
 			let getIPV4 = await axios.get(
 				`https://api.itool.click/itools/ip-range/v4?ip=${currentIP}&uid=test`
@@ -23,6 +24,9 @@
 			onceClicked = true;
 		}
 	}
+	onMount(() => {
+		fetchIP();
+	});
 </script>
 
 <Geolocation getPosition bind:coords />
@@ -49,7 +53,7 @@
 						<button
 							class="rounded-full bg-orange-300 p-4 text-center text-white"
 							type="button"
-							on:click={fetchList}>取得 IP 詳細資料</button
+							on:click={fetchIP}>取得 IP 詳細資料</button
 						>
 					</div>
 				</div>
