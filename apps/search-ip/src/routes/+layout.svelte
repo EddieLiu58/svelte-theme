@@ -33,6 +33,7 @@
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
 		crossorigin="anonymous"
 	></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DV51NDLB5"></script>
 </svelte:head>
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
