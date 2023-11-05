@@ -1,10 +1,5 @@
 ---
-import getInfo from "@services/getInfoByIp";
 import IndexLayout from "../layouts/IndexLayout.astro";
-const fromServerIp = Astro.clientAddress;
-const fromNginxIp = Astro.request.headers.get("x-forwarded-for");
-const ip:string | null = (fromNginxIp) ? fromNginxIp : fromServerIp;
-let ipInfo = await getInfo(ip)
 ---
 <IndexLayout title="Home Page">
 	<p>首頁</p>
