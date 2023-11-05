@@ -2,6 +2,11 @@
 	"name": "meme",
 	"version": "1.0.0",
 	"private": true,
+	"workspaces": {
+		"nohoist": [
+			"**"
+		]
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

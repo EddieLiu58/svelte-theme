@@ -8,6 +8,11 @@
     "apps/*",
     "packages/*"
   ],
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
