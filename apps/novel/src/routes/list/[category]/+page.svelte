@@ -59,7 +59,7 @@
 
 <div class="mx-auto grid max-w-6xl px-4">
 	<h1 class="hidden text-3xl font-bold text-red-300">
-		inovels-{data.category} - 自由創作者股份有限公司
+		inovels | {data.category} | 免費、無廣告輕鬆看小說
 	</h1>
 	<div class="mt-8">
 		<input

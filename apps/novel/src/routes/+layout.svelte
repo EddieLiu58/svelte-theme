@@ -17,7 +17,7 @@
 	export let data; // Exported so that child components/pages can provide data.
 	// Create a reactive statement to compute meta tags.
 	$: metaTags = {
-		titleTemplate: '%s - 自由創作者股份有限公司', // Default title template.
+		titleTemplate: '%s - 免費、無廣告輕鬆看小說', // Default title template.
 		description:
 			'輕便閱小說對於通勤，打發時間的你，是得意的最佳夥伴，輕鬆掌握各類型小說書籍，只讓你沉浸在文字的虛擬世界裡。', // Default description.
 		canonical: $page.url,

@@ -8,7 +8,7 @@ export const load = async ({ url }) => {
       // OpenGraph meta tags specific to this page.
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
-      title: 'inovels list - 自由創作者股份有限公司',
+      title: 'inovels list - 免費、無廣告輕鬆看小說',
       description: '輕便閱小說對於通勤，打發時間的你，是得意的最佳夥伴，輕鬆掌握各類型小說書籍，只讓你沉浸在文字的虛擬世界裡。',
       images: [ {
         url: `${url}images/logo.webp`,

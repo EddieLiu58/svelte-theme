@@ -52,7 +52,7 @@
 	});
 </script>
 
-<h1 class="hidden text-3xl font-bold text-red-300">inovels - 自由創作者股份有限公司</h1>
+<h1 class="hidden text-3xl font-bold text-red-300">inovels - 免費、無廣告輕鬆看小說</h1>
 <!-- <div class="mb-12 w-screen">
 	<Splide
 		options={{

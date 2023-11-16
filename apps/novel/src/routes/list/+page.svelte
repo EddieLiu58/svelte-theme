@@ -28,7 +28,7 @@
 </script>
 
 <div class="mx-auto grid max-w-6xl px-4">
-	<h1 class="hidden text-3xl font-bold text-red-300">inovels list - 自由創作者股份有限公司</h1>
+	<h1 class="hidden text-3xl font-bold text-red-300">inovels list - 免費、無廣告輕鬆看小說</h1>
 	<div class="mt-8">
 		<input
 			type="search"

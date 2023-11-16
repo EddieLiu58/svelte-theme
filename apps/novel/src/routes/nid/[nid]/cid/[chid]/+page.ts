@@ -28,7 +28,7 @@ export const load: PageLoad = async ({ url,params }) => {
       // OpenGraph meta tags specific to this page.
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
-      title: `${novelsItem.name} - ${item.title} - 自由創作者股份有限公司`,
+      title: `${novelsItem.name} - ${item.title} - 免費、無廣告輕鬆看小說`,
       description: `${novelsItem.introduction}`,
       images: [ {
         url: `${PUBLIC_PROD_BASE_URL}/images/${nid}.jpg`,
