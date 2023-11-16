@@ -65,7 +65,7 @@
 		<input
 			type="search"
 			placeholder="請輸入關鍵字..."
-			class="mb-4 w-full rounded-lg border-2 border-solid border-gray-200 bg-search p-4 outline-none focus:border-red-300"
+			class="bg-search mb-4 w-full rounded-lg border-2 border-solid border-gray-200 p-4 outline-none focus:border-red-300"
 		/>
 	</div>
 	<div class="mb-8 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
@@ -83,7 +83,7 @@
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
 		{#each list as item}
 			<li>
-				<a href="{base}/{item.id}" class="flex gap-2">
+				<a href="{base}/nid/{item.id}" class="flex gap-2">
 					<div class="max-h-[240px] w-full max-w-[110px] overflow-hidden rounded-md">
 						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
 					</div>
