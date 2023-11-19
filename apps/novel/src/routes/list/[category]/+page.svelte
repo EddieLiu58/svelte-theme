@@ -62,11 +62,11 @@
 		inovels | {data.category} | 免費、無廣告輕鬆看小說
 	</h1>
 	<div class="mt-8">
-		<input
+		<!-- <input
 			type="search"
 			placeholder="請輸入關鍵字..."
 			class="bg-search mb-4 w-full rounded-lg border-2 border-solid border-gray-200 p-4 outline-none focus:border-red-300"
-		/>
+		/> -->
 	</div>
 	<div class="mb-8 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}

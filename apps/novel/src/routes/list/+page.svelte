@@ -7,11 +7,13 @@
 	import { base } from '$app/paths';
 
 	const baseUrl = PUBLIC_PROD_BASE_URL;
-	let list: Array<{ id: string; name: string; author: string; introduction: string }> = [];
+	let list: Array<{ nid: string; id: string; name: string; author: string; introduction: string }> =
+		[];
 	// store the new batch of data here.
 	let newBatch: Array<{ id: string; name: string; author: string; introduction: string }> = [];
 	let categoryList: Array<string> = [];
 	let currentPage = 1;
+	let searchValue: string = '';
 	async function fetchCategory() {
 		let category = await axios.get(`${baseUrl}/novels/category/list`);
 		categoryList = [...categoryList, ...category.data];
@@ -19,22 +21,54 @@
 	async function fetchList() {
 		const content = await axios.get(`${baseUrl}/novels?page=${currentPage}&size=24`);
 		newBatch = content.data;
+		list = [...list, ...newBatch];
 	}
+	function resetSearchNovels() {
+		list.length = 0;
+		searchValue = '';
+		fetchList();
+	}
+	async function searchNovels(e) {
+		if (e.charCode === 13 && searchValue !== '') {
+			list.length = 0;
+			let search = await axios.get(`${baseUrl}/novels/search?keyword=${searchValue}&size=100`);
+			list = search.data;
+		} else {
+			resetSearchNovels();
+		}
+	}
+	resetSearchNovels;
 	onMount(() => {
 		fetchCategory();
 		fetchList();
 	});
-	$: list = [...list, ...newBatch];
+	// $: list = [...list, ...newBatch];
 </script>
 
 <div class="mx-auto grid max-w-6xl px-4">
 	<h1 class="hidden text-3xl font-bold text-red-300">inovels list - 免費、無廣告輕鬆看小說</h1>
-	<div class="mt-8">
+	<div class="mb-4 mt-8 flex items-center gap-4">
 		<input
-			type="search"
+			type="input"
 			placeholder="請輸入關鍵字..."
-			class="bg-search mb-4 w-full rounded-lg border-2 border-solid border-gray-200 p-4 outline-none focus:border-red-300"
+			class="bg-search w-full rounded-lg border-2 border-solid border-gray-200 p-4 outline-none focus:border-stone-500"
+			bind:value={searchValue}
+			on:keypress={searchNovels}
 		/>
+		{#if searchValue === ''}
+			<button
+				type="button"
+				class="w-full max-w-[100px] rounded-3xl border-solid bg-gradient-to-r from-stone-500 to-stone-700 p-4 text-center text-white transition-all"
+				on:click={searchNovels}>搜尋</button
+			>
+		{/if}
+		{#if searchValue !== ''}
+			<button
+				type="button"
+				class="w-full max-w-[100px] rounded-3xl border-solid bg-gradient-to-r from-stone-500 to-stone-700 p-4 text-center text-white transition-all"
+				on:click={resetSearchNovels}>清除搜尋</button
+			>
+		{/if}
 	</div>
 	<div class="mb-8 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
@@ -49,9 +83,9 @@
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
 		{#each list as item}
 			<li>
-				<a href="{base}/nid/{item.id}" class="flex gap-2">
+				<a href="{base}/nid/{item.id ? item.id : item.nid}" class="flex gap-2">
 					<div class="max-h-[240px] w-full max-w-[110px] overflow-hidden rounded-md">
-						<img src="{baseUrl}/images/{item.id}.jpg" class="w-full" alt="" />
+						<img src="{baseUrl}/images/{item.id ? item.id : item.nid}.jpg" class="w-full" alt="" />
 					</div>
 					<div class="flex flex-col p-2">
 						<h3 class="mb-2 font-bold">{item.name}</h3>
@@ -61,14 +95,16 @@
 				</a>
 			</li>
 		{/each}
-		<InfiniteScroll
-			hasMore={newBatch.length}
-			window={true}
-			threshold={100}
-			on:loadMore={() => {
-				currentPage++;
-				fetchList();
-			}}
-		/>
+		{#if searchValue === ''}
+			<InfiniteScroll
+				hasMore={newBatch.length}
+				window={true}
+				threshold={100}
+				on:loadMore={() => {
+					currentPage++;
+					fetchList();
+				}}
+			/>
+		{/if}
 	</ul>
 </div>
