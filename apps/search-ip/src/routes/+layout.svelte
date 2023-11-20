@@ -34,6 +34,15 @@
 		crossorigin="anonymous"
 	></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3DV51NDLB5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-3DV51NDLB5');
+	</script>
 </svelte:head>
 <div id="app">
 	<Headroom duration="350ms" offset={300} tolerance={5}>
