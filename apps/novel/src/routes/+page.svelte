@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+	import '@splidejs/svelte-splide/css/themes/splide-default.min.css';
 	import axios from 'axios';
 	import { onMount } from 'svelte';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';

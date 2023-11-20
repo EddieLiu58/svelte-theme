@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
+	import '@splidejs/svelte-splide/css/themes/splide-sea-green.min.css';
 	import { base } from '$app/paths';
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	export let label = '';

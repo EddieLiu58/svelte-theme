@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+	import '@splidejs/svelte-splide/css/themes/splide-default.min.css';
 	import axios from 'axios';
 	import Geolocation from 'svelte-geolocation';
 	import { onMount } from 'svelte';
