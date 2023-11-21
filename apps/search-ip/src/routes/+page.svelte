@@ -3,6 +3,7 @@
 	import axios from 'axios';
 	import Geolocation from 'svelte-geolocation';
 	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -94,7 +95,11 @@
 		</div>
 	</div>
 </section>
-
+{#if browser}
+<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
+<ins class="eas6a97888e" data-zoneid="5134298"></ins> 
+<script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+{/if}
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
