@@ -28,6 +28,7 @@
 <MetaTags {...metaTags} />
 <svelte:window />
 <svelte:head>
+	<meta name="6a97888e-site-verification" content="ce20bd9a2a373e378a577fe66cc28f19">
 	<script
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
