@@ -5,6 +5,7 @@
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	import { base } from '$app/paths';
 	import CustomSplide from '../components/CustomSplide.svelte';
+	import { browser } from '$app/environment';
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 	const topList = [
 		{ url: '/', image: `${base}/images/topSlide1.webp` },
@@ -115,8 +116,12 @@
 	<div class="session4 relative">
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
-</div>
-
+</div> 
+{#if browser}
+<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
+<ins class="eas6a97888e" data-zoneid="5134144"></ins> 
+<script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+{/if}
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
