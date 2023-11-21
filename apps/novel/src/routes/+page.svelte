@@ -119,7 +119,7 @@
 </div> 
 {#if browser}
 <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-<ins class="eas6a97888e" data-zoneid="5134144"></ins> 
+<ins class="eas6a97888e" data-zoneid="5134162"></ins> 
 <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
 {/if}
 <style lang="postcss">
