@@ -1,13 +1,15 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+import { sveltekit } from '@sveltejs/kit';
 import { defineConfig } from 'vitest/config';
 const mode = process.env.APP_ENV // This now exists.
 
 export default defineConfig({
-	mode: mode, // This will set the mode, to avoid confusions.
 	plugins: [sveltekit()],
 	server: {
 	},
 	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
+		include: ['src/**/*.{test,spec}.{js,ts}'],
+		deps: {
+			inline: [`@sveltejs/kit`],
+		},
 	}
 });

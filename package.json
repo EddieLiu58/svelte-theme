@@ -4,10 +4,6 @@
   "private": true,
   "author": "EddieLiu <eddieliu58@gmail.com>",
   "license": "MIT",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "browser": {
     "fs": false,
     "path": false,

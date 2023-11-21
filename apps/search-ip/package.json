@@ -7,6 +7,11 @@
 			"**"
 		]
 	},
+	"browser": {
+		"fs": false,
+		"path": false,
+		"os": false
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
