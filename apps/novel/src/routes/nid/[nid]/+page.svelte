@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	import { base } from '$app/paths';
+	import { browser } from '$app/environment';
+
 	/** @type {import('./$types').PageData} */
 	export let data: {
 		chaptersList: Array<{ id: string; title: string }>;
@@ -17,7 +19,7 @@
 		<div class="w-full py-4 backdrop-blur-lg">
 			<div class=" bg-white">
 				<div
-					class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-12 py-16 md:grid-cols-[1fr_6fr]"
+					class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-12 py-16 md:grid-cols-[1fr_6fr_2fr]"
 				>
 					<div class="flex justify-center overflow-hidden rounded-md md:block">
 						<img src="{baseUrl}/images/{data.nid}.jpg" class="w-auto" alt="" />
@@ -39,6 +41,19 @@
 								>返回列表頁</a
 							>
 						</div>
+					</div>
+					<div>
+						{#if browser}
+							<script
+								async
+								type="application/javascript"
+								src="https://a.magsrv.com/ad-provider.js"
+							></script>
+							<ins class="eas6a97888e" data-zoneid="5134298" />
+							<script>
+								(AdProvider = window.AdProvider || []).push({ serve: {} });
+							</script>
+						{/if}
 					</div>
 				</div>
 			</div>
