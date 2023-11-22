@@ -107,21 +107,172 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
+	{#if browser}
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135532" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135534" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135538" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+		</div>
+	{/if}
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
+	{#if browser}
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135540" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135542" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135546" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+		</div>
+	{/if}
 	<div class="session3 relative">
 		<CustomSplide label={'懸疑'} list={suspenseList} />
 	</div>
+	{#if browser}
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135548" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135550" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135552" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+		</div>
+	{/if}
 	<div class="session4 relative">
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
-</div> 
+	{#if browser}
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135554" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135556" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+			<div>
+				<script
+					async
+					type="application/javascript"
+					src="https://a.magsrv.com/ad-provider.js"
+				></script>
+				<ins class="eas6a97888e" data-zoneid="5135558" />
+				<script>
+					(AdProvider = window.AdProvider || []).push({ serve: {} });
+				</script>
+			</div>
+		</div>
+	{/if}
+</div>
 {#if browser}
-<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-<ins class="eas6a97888e" data-zoneid="5134298"></ins> 
-<script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+	<ins class="eas6a97888e" data-zoneid="5134298" />
+	<script>
+		(AdProvider = window.AdProvider || []).push({ serve: {} });
+	</script>
 {/if}
+
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
