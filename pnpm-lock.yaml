@@ -307,6 +307,9 @@ importers:
       vitest:
         specifier: ^0.32.2
         version: 0.32.4
+    dependenciesMeta:
+      button:
+        injected: true
 
   apps/search-ip:
     dependencies:

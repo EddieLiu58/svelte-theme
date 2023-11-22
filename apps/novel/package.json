@@ -7,6 +7,16 @@
 			"**"
 		]
 	},
+	"dependenciesMeta": {
+    "button": {
+      "injected": true
+    }
+  },
+  "peerDependenciesMeta": {
+    "bar": {
+      "optional": true
+    }
+  },
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
