@@ -10,6 +10,7 @@
       "cache": false,
       "persistent": true
     },
+    "preview": {},
     "test": {},
     "test:watch": {
       "cache": false
