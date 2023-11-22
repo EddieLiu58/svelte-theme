@@ -10,6 +10,9 @@ export default defineConfig({
 			allow: ['..'],
 		},
 	},
+	preview: {
+    port: 4174,
+  },
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		deps: {
