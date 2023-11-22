@@ -45,14 +45,14 @@
 					<div>
 						{#if browser}
 							<script
+								type="text/javascript"
+								src="//cdn.runative-syndicate.com/sdk/v1/bi.js"
+								data-ts-spot="2e68175880e540b3bd5f12d1d2dce8da"
+								data-ts-width="300"
+								data-ts-height="250"
 								async
-								type="application/javascript"
-								src="https://a.magsrv.com/ad-provider.js"
+								defer
 							></script>
-							<ins class="eas6a97888e" data-zoneid="5134298" />
-							<script>
-								(AdProvider = window.AdProvider || []).push({ serve: {} });
-							</script>
 						{/if}
 					</div>
 				</div>
