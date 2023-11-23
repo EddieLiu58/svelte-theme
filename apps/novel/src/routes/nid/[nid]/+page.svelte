@@ -19,7 +19,7 @@
 		<div class="w-full py-4 backdrop-blur-lg">
 			<div class=" bg-white">
 				<div
-					class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-12 py-16 md:grid-cols-[1fr_6fr_2fr]"
+					class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-12 py-16 md:grid-cols-[1fr_6fr]"
 				>
 					<div class="flex justify-center overflow-hidden rounded-md md:block">
 						<img src="{baseUrl}/images/{data.nid}.jpg" class="w-auto" alt="" />
@@ -41,19 +41,6 @@
 								>返回列表頁</a
 							>
 						</div>
-					</div>
-					<div>
-						{#if browser}
-							<script
-								type="text/javascript"
-								src="//cdn.runative-syndicate.com/sdk/v1/bi.js"
-								data-ts-spot="2e68175880e540b3bd5f12d1d2dce8da"
-								data-ts-width="300"
-								data-ts-height="250"
-								async
-								defer
-							></script>
-						{/if}
 					</div>
 				</div>
 			</div>
