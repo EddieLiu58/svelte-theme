@@ -1,4 +1,18 @@
 @tailwind base;
+@layer base {
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	a,
+	span {
+		@apply text-text;
+	}
+}
+
 @tailwind components;
 @tailwind utilities;
 
