@@ -1,19 +1,21 @@
-import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
-
 async function getInfo(
 	ip: string
 ): Promise<{ ip_network: string; county_code: string; county_name: string }> {
 	const uuid = uuidv4()
-	await axios
-		.get(`https://${process.env.BACKEND}/itools/ip-range/v4?ip=${ip}&uid=${uuid}`)
-		.then(function (response) {
+	await fetch(`https://${process.env.BACKEND}/itools/ip-range/v4?ip=${ip}&uid=${uuid}`)
+		.then(async function (response) {
 			// handle success
 			console.log(response)
 			if (response.status == 200) {
-				const data = response.data
-				return data.success
-					? { ip_network: ip, county_code: data.country_code, county_name: data.county_name }
+				const data: Promise<{ success: boolean; country_code: string; county_name: string }> =
+					response.json()
+				return (await data).success
+					? {
+							ip_network: ip,
+							county_code: (await data).country_code,
+							county_name: (await data).county_name
+					  }
 					: { ip_network: ip, county_code: '', county_name: '' }
 			}
 			return { ip_network: ip, county_code: '', county_name: '' }
