@@ -1,12 +1,42 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SEO } from "astro-seo";
 import '../base.css';
 ---
-<html lang="en">
+
+<html lang="zh-hant">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <SEO
+    title="Itool - 為使用者提供免費及最實用的小工具"
+    description="Itool - 我們致力於提供免費及最實用的小工具，以解決您的各種需求。如果有任何工具期望我們開發，隨時歡迎與我們聯繫。"
+    canonical={Astro.url.href}
+    openGraph={{
+      basic: {
+        title: "Itool - 為使用者提供免費及最實用的小工具",
+        type: "website",
+        image: `${Astro.url}itool-logo.svg`,
+      },
+      optional:{
+        description:"Itool - 我們致力於提供免費及最實用的小工具，以解決您的各種需求。如果有任何工具期望我們開發，隨時歡迎與我們聯繫。",
+      }
+    }}
+    extend={{
+      // extending the default link tags
+      link: [{ rel: "icon", href: `${Astro.url}itool-logo.svg` }],
+      // extending the default meta tags
+      meta: [
+        {
+          name: "twitter:image",
+          content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        },
+        { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+        { name: "twitter:description", content: "Agent" },
+      ],
+    }}
+  />
   </head>
   <body class="bg-bg">
     <Header />
