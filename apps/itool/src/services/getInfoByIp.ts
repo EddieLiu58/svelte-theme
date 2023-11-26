@@ -1,13 +1,30 @@
-import { pool } from "@lib/db";
-
-async function getInfo(ip: string | null) {
-    ip = "220.137.8.95";
-    const client = await pool.connect();
-    const { rows } = await client.query(
-        "SELECT * FROM ipv4_map WHERE $1::inet << ip_network;",
-        [ip]
-    );
-    client.release();
-    return rows.length != 0 ? rows[0] : {};
+import { v4 as uuidv4 } from 'uuid'
+async function getInfo(
+	ip: string
+): Promise<{ ip_network: string; county_code: string; county_name: string }> {
+	const uuid = uuidv4()
+	await fetch(`https://${process.env.BACKEND}/itools/ip-range/v4?ip=${ip}&uid=${uuid}`)
+		.then(async function (response) {
+			// handle success
+			console.log(response)
+			if (response.status == 200) {
+				const data: Promise<{ success: boolean; country_code: string; county_name: string }> =
+					response.json()
+				return (await data).success
+					? {
+							ip_network: ip,
+							county_code: (await data).country_code,
+							county_name: (await data).county_name
+					  }
+					: { ip_network: ip, county_code: '', county_name: '' }
+			}
+			return { ip_network: ip, county_code: '', county_name: '' }
+		})
+		.catch(function (error) {
+			// handle error
+			console.log(error)
+			return { ip_network: ip, county_code: '', county_name: '' }
+		})
+	return { ip_network: ip, county_code: '', county_name: '' }
 }
-export default getInfo;
+export default getInfo

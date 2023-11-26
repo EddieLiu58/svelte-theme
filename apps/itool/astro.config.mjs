@@ -1,18 +1,17 @@
 import { defineConfig } from 'astro/config'
-import node from '@astrojs/node'
 import tailwind from '@astrojs/tailwind'
 import svelte from '@astrojs/svelte'
+import cloudflare from "@astrojs/cloudflare";
 
-// https://astro.build/config
 export default defineConfig({
 	output: 'server',
 	integrations: [
 		tailwind({
 			applyBaseStyles: false
 		}),
-		svelte()
+		svelte(),
 	],
-	adapter: node({
-		mode: 'standalone'
+	adapter: cloudflare({
+		mode: "directory"
 	})
 })
