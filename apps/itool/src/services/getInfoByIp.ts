@@ -1,30 +1,37 @@
 import { v4 as uuidv4 } from 'uuid'
+import dotenv from 'dotenv'
+
+dotenv.config()
 async function getInfo(
 	ip: string
-): Promise<{ ip_network: string; county_code: string; county_name: string }> {
+): Promise<{ ip_network: string; country_code: string; country_name: string }> {
 	const uuid = uuidv4()
+	ip = '125.228.140.213'
+	type Result = { ip_network: string; country_code: string; country_name: string }
+	let result!: Result
 	await fetch(`https://${process.env.BACKEND}/itools/ip-range/v4?ip=${ip}&uid=${uuid}`)
 		.then(async function (response) {
 			// handle success
-			console.log(response)
 			if (response.status == 200) {
-				const data: Promise<{ success: boolean; country_code: string; county_name: string }> =
-					response.json()
-				return (await data).success
-					? {
-							ip_network: ip,
-							county_code: (await data).country_code,
-							county_name: (await data).county_name
-					  }
-					: { ip_network: ip, county_code: '', county_name: '' }
+				const data: { success: boolean; country_code: string; country_name: string } =
+					await response.json()
+				result =
+					data.success == true
+						? {
+								ip_network: ip,
+								country_code: data['country_code'],
+								country_name: data.country_name
+						  }
+						: { ip_network: ip, country_code: '', country_name: '' }
 			}
-			return { ip_network: ip, county_code: '', county_name: '' }
 		})
 		.catch(function (error) {
 			// handle error
 			console.log(error)
-			return { ip_network: ip, county_code: '', county_name: '' }
+			result.ip_network = ip
+			result.country_code = ''
+			result.country_name = ''
 		})
-	return { ip_network: ip, county_code: '', county_name: '' }
+	return result
 }
 export default getInfo

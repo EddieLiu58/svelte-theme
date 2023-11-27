@@ -1,10 +1,10 @@
 ---
 import getInfo from "@services/getInfoByIp";
 import ItoolLayout from "../layouts/ItoolLayout.astro";
-const fromServerIp = Astro.clientAddress;
 const fromNginxIp = Astro.request.headers.get("x-forwarded-for");
-const ip:string | null = (fromNginxIp) ? fromNginxIp : fromServerIp;
+const ip:string | null = (fromNginxIp) ? fromNginxIp : "127.0.0.1";
 let ipInfo = await getInfo(ip)
+console.log(ipInfo)
 ---
 <ItoolLayout>
 	<section
@@ -47,8 +47,8 @@ let ipInfo = await getInfo(ip)
 				<h2 class="text-base font-bold">IPv4</h2>
 				<ul class="mt-2">
 					<li>ip : <span class="text-[#98C379]">{ipInfo.ip_network}</span></li>
-					<li>county code : <span class="text-[#98C379]">{ipInfo.county_code}</span></li>
-					<li>county name : <span class="text-[#98C379]">{ipInfo.county_name}</span></li>
+					<li>county code : <span class="text-[#98C379]">{ipInfo.country_code}</span></li>
+					<li>county name : <span class="text-[#98C379]">{ipInfo.country_name}</span></li>
 				</ul>
 			</div>
 		</div>
