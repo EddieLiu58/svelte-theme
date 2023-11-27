@@ -4,7 +4,7 @@ import svelte from '@astrojs/svelte'
 import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
-	output: 'hybrid',
+	output: 'server',
 	integrations: [
 		tailwind({
 			applyBaseStyles: false
