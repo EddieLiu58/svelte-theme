@@ -64,7 +64,9 @@
 			>
 		{/each}
 	</div>
-	{#if browser}
+	<div class="session1 relative">
+		<CustomSplide label={'仙俠'} list={xianXiaList} />
+	</div>
 	<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
 		<div>
 			<script
@@ -111,10 +113,6 @@
 			</script>
 		</div>
 	</div>
-{/if} 
-	<div class="session1 relative">
-		<CustomSplide label={'仙俠'} list={xianXiaList} />
-	</div>
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
@@ -125,10 +123,10 @@
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
 </div>
-{#if browser}
-<!-- Ads Managed by AdSpyglass.com -->
+<div>
+	<!-- Ads Managed by AdSpyglass.com -->
 <script src="//cdn.tapioni.com/vast-im.js" data-spots="457234" data-subid1="%subid1%" data-subid2="%subid2%"></script>
-{/if} 
+</div>
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
