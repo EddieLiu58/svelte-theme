@@ -5,7 +5,7 @@
 	import { PUBLIC_PROD_BASE_URL } from '$env/static/public';
 	import { base } from '$app/paths';
 	import CustomSplide from '../components/CustomSplide.svelte';
-	import { browser } from '$app/environment';
+	// import { browser } from '$app/environment';
 	const baseUrl = PUBLIC_PROD_BASE_URL;
 	const topList = [
 		{ url: '/', image: `${base}/images/topSlide1.webp` },
@@ -54,46 +54,6 @@
 </script>
 
 <h1 class="hidden text-3xl font-bold text-red-300">inovels - 免費、無廣告輕鬆看小說</h1>
-<!-- <div class="mb-12 w-screen">
-	<Splide
-		options={{
-			type: 'loop',
-			gap: '1rem',
-			autoplay: true,
-			perPage: 3,
-			perMove: 1,
-			pagination: false,
-			classes: {
-				arrows: 'splide__arrows',
-				arrow:
-					'absolute bottom-0 top-0 z-10 w-12 flex cursor-pointer items-center justify-center  opacity-50',
-				prev: 'splide__arrow--prev left-0',
-				next: 'splide__arrow--next right-0',
-				pagination: 'splide__pagination bottom-0',
-				page: 'splide__pagination__page bg-gray-500'
-			},
-			breakpoints: {
-				1280: {
-					perPage: 2
-				},
-				768: {
-					perPage: 1
-				}
-			}
-		}}
-		aria-label="My Favorite Images"
-	>
-		{#each topList as item}
-			<SplideSlide>
-				<a href={item.url} class="flex flex-col gap-2">
-					<div class="w-full overflow-hidden rounded-md md:max-h-[300px]">
-						<img src={item.image} class="w-full" alt="" />
-					</div>
-				</a>
-			</SplideSlide>
-		{/each}
-	</Splide>
-</div> -->
 <div class="mx-auto grid max-w-full grid-cols-1 gap-y-8 px-6 md:max-w-6xl">
 	<div class="mt-6 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
@@ -107,171 +67,16 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
-	{#if browser}
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135532" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135534" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135538" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-		</div>
-	{/if}
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
-	{#if browser}
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135540" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135542" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135546" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-		</div>
-	{/if}
 	<div class="session3 relative">
 		<CustomSplide label={'懸疑'} list={suspenseList} />
 	</div>
-	{#if browser}
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135548" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135550" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135552" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-		</div>
-	{/if}
 	<div class="session4 relative">
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
-	{#if browser}
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135554" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135556" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-			<div>
-				<script
-					async
-					type="application/javascript"
-					src="https://a.magsrv.com/ad-provider.js"
-				></script>
-				<ins class="eas6a97888e" data-zoneid="5135558" />
-				<script>
-					(AdProvider = window.AdProvider || []).push({ serve: {} });
-				</script>
-			</div>
-		</div>
-	{/if}
 </div>
-{#if browser}
-	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
-	<ins class="eas6a97888e" data-zoneid="5134298" />
-	<script>
-		(AdProvider = window.AdProvider || []).push({ serve: {} });
-	</script>
-{/if}
 
 <style lang="postcss">
 	/* :global(html) {
