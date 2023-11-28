@@ -25,6 +25,43 @@
 						<img src="{baseUrl}/images/{data.nid}.jpg" class="w-auto" alt="" />
 					</div>
 					<div class="md: flex flex-col items-center gap-4 text-neutral-600 md:items-start">
+						{#if browser}
+						<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135532" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135534" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135538" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+						</div>
+					{/if} 
 						<h1 class="text-3xl md:text-4xl">{data.item.name}</h1>
 						<span class="text-lg">作者： {data.item.author}</span>
 						<span class="text-lg">分類： {data.item.category}</span>
@@ -41,6 +78,43 @@
 								>返回列表頁</a
 							>
 						</div>
+						{#if browser}
+						<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135540" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135542" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+							<div>
+								<script
+									async
+									type="application/javascript"
+									src="https://a.magsrv.com/ad-provider.js"
+								></script>
+								<ins class="eas6a97888e" data-zoneid="5135546" />
+								<script>
+									(AdProvider = window.AdProvider || []).push({ serve: {} });
+								</script>
+							</div>
+						</div>
+					{/if}
 					</div>
 				</div>
 			</div>
@@ -49,6 +123,43 @@
 	<div
 		class="mx-auto mt-9 flex w-full max-w-6xl flex-col gap-4 rounded-lg bg-white px-12 py-12 drop-shadow-md"
 	>
+	{#if browser}
+	<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+		<div>
+			<script
+				async
+				type="application/javascript"
+				src="https://a.magsrv.com/ad-provider.js"
+			></script>
+			<ins class="eas6a97888e" data-zoneid="5135548" />
+			<script>
+				(AdProvider = window.AdProvider || []).push({ serve: {} });
+			</script>
+		</div>
+		<div>
+			<script
+				async
+				type="application/javascript"
+				src="https://a.magsrv.com/ad-provider.js"
+			></script>
+			<ins class="eas6a97888e" data-zoneid="5135550" />
+			<script>
+				(AdProvider = window.AdProvider || []).push({ serve: {} });
+			</script>
+		</div>
+		<div>
+			<script
+				async
+				type="application/javascript"
+				src="https://a.magsrv.com/ad-provider.js"
+			></script>
+			<ins class="eas6a97888e" data-zoneid="5135552" />
+			<script>
+				(AdProvider = window.AdProvider || []).push({ serve: {} });
+			</script>
+		</div>
+	</div>
+{/if}
 		<h2 class="mb-4 text-2xl font-bold">章節</h2>
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 			{#each data.chaptersList as chapter}
@@ -59,3 +170,10 @@
 		</div>
 	</div>
 </div>
+{#if browser}
+	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+	<ins class="eas6a97888e" data-zoneid="5134298" />
+	<script>
+		(AdProvider = window.AdProvider || []).push({ serve: {} });
+	</script>
+{/if}
