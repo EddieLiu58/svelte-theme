@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { browser } from '$app/environment';
+	// import { browser } from '$app/environment';
 
 	/** @type {import('./$types').PageData} */
 	export let data: {
@@ -48,7 +48,3 @@
 		</div>
 	</div>
 </div>
-{#if browser}
-<!-- Ads Managed by AdSpyglass.com -->
-<script src="//cdn.tapioni.com/vast-im.js" data-spots="457234" data-subid1="%subid1%" data-subid2="%subid2%"></script>
-{/if} 
