@@ -33,7 +33,7 @@
 <MetaTags {...metaTags} />
 <svelte:window />
 <svelte:head>
-	<meta name="6a97888e-site-verification" content="5360d4c26732ab3b66c46360b4716fb3">
+	<meta name="6a97888e-site-verification" content="5360d4c26732ab3b66c46360b4716fb3" />
 	<script
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
@@ -112,8 +112,19 @@
 
 <style lang="postcss">
 	:global(html) {
-		font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-			Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family:
+			'Noto Sans TC',
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			Oxygen,
+			Ubuntu,
+			Cantarell,
+			'Open Sans',
+			'Helvetica Neue',
+			sans-serif;
 	}
 	:global(div.svelte-1ql6gaa) {
 		z-index: 30;
