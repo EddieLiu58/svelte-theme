@@ -72,6 +72,10 @@
 	</Headroom>
 	<div class="mx-auto mt-[120px]"><slot /></div>
 	<footer class="mt-12 flex flex-col items-center bg-[#292929] p-4">
+		<div class="item-center flex justify-center gap-4 mb-4">
+			<a href="/liability" class="text-white">使用條款及免責聲明</a>
+			<a href="/privacy" class="text-white">隱私權條款</a>
+		</div>
 		<div class="item-center flex flex-col justify-center">
 			<div class="text-center">
 				<span class="text-white">自由創作者股份有限公司</span><span class="text-white"
