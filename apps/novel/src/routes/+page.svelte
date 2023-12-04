@@ -122,11 +122,25 @@
 	<div class="session4 relative">
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
+	<div class="session5 flex justify-center">
+		<a href="https://trafficadbar.com/WilliamWang" target="_top"
+			><img src="https://trafficadbar.com/assets/banners/banner468x60.gif" /></a
+		>
+	</div>
 </div>
 <div>
 	<!-- Ads Managed by AdSpyglass.com -->
-<script src="//cdn.tapioni.com/vast-im.js" data-spots="457234" data-subid1="%subid1%" data-subid2="%subid2%"></script>
+	<!-- Ads Managed by AdSpyglass.com -->
+	<!-- Ads Managed by AdSpyglass.com -->
+	<!-- Ads Managed by AdSpyglass.com -->
+	<script
+		src="//cdn.tapioni.com/vast-im.js"
+		data-spots="457234"
+		data-subid1="%subid1%"
+		data-subid2="%subid2%"
+	></script>
 </div>
+
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
