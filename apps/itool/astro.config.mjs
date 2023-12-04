@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import svelte from '@astrojs/svelte'
-import cloudflare from "@astrojs/cloudflare";
+// import node from '@astrojs/node'
+import cloudflare from '@astrojs/cloudflare'
 
 export default defineConfig({
 	output: 'server',
@@ -9,9 +10,12 @@ export default defineConfig({
 		tailwind({
 			applyBaseStyles: false
 		}),
-		svelte(),
+		svelte()
 	],
+	// adapter: node({
+	// 	mode: 'standalone'
+	// })
 	adapter: cloudflare({
-		mode: "directory"
+		mode: 'directory'
 	})
 })
