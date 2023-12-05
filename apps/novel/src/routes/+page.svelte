@@ -130,14 +130,17 @@
 </div>
 <div>
 	<!-- Ads Managed by AdSpyglass.com -->
-	<!-- Ads Managed by AdSpyglass.com -->
-	<!-- Ads Managed by AdSpyglass.com -->
+
 	<!-- Ads Managed by AdSpyglass.com -->
 	<script
 		src="//cdn.tapioni.com/vast-im.js"
 		data-spots="457234"
 		data-subid1="%subid1%"
 		data-subid2="%subid2%"
+	></script>
+	<script
+		type="text/javascript"
+		src="//pl21655230.toprevenuegate.com/72/c3/5c/72c35cddd97a7a4269bcc2b453c2f6b6.js"
 	></script>
 </div>
 
