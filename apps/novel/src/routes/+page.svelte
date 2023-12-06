@@ -67,7 +67,7 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
-	<div class="flex justify-center">
+	<div class="flex justify-center gap-4">
 		<script async src="//cdn.tapioni.com/asg-iframe.js"></script>
 		<iframe
 			title=""
@@ -80,6 +80,20 @@
 			loading="lazy"
 			src="//a.labadena.com/api/spots/458573?p=1&s1=%subid1%&kw="
 		></iframe>
+		<script
+			type="text/javascript"
+			src="//cdn.tapioni.com/ip-push.js"
+			data-spot="458575"
+			data-subid1="%subid1%"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.tapioni.com/asg_embed.js"
+			data-spots="458576"
+			data-tag="asg"
+			data-subid1="%subid1%"
+			data-subid2="%subid2%"
+		></script>
 	</div>
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
