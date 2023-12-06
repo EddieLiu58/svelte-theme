@@ -67,10 +67,10 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
-	<div class="flex justify-center gap-4">
+	<div class="flex md:justify-between gap-4">
 		<script async src="//cdn.tapioni.com/asg-iframe.js"></script>
 		<iframe
-			title=""
+			title="ads-1"
 			class="na"
 			frameborder="0"
 			scrolling="no"
@@ -80,20 +80,17 @@
 			loading="lazy"
 			src="//a.labadena.com/api/spots/458573?p=1&s1=%subid1%&kw="
 		></iframe>
-		<script
-			type="text/javascript"
-			src="//cdn.tapioni.com/ip-push.js"
-			data-spot="458575"
-			data-subid1="%subid1%"
-		></script>
-		<script
-			type="text/javascript"
-			src="//cdn.tapioni.com/asg_embed.js"
-			data-spots="458576"
-			data-tag="asg"
-			data-subid1="%subid1%"
-			data-subid2="%subid2%"
-		></script>
+		<iframe
+			title="ads-2"
+			class="na"
+			frameborder="0"
+			scrolling="no"
+			width="300"
+			height="250"
+			sandbox="allow-scripts allow-popups allow-forms allow-same-origin"
+			loading="lazy"
+			src="//a.labadena.com/api/spots/458577?p=1&s1=%subid1%&kw="
+		></iframe>
 	</div>
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
@@ -120,6 +117,20 @@
 	<script
 		type="text/javascript"
 		src="//pl21655230.toprevenuegate.com/72/c3/5c/72c35cddd97a7a4269bcc2b453c2f6b6.js"
+	></script>
+	<script
+		type="text/javascript"
+		src="//cdn.tapioni.com/ip-push.js"
+		data-spot="458575"
+		data-subid1="%subid1%"
+	></script>
+	<script
+		type="text/javascript"
+		src="//cdn.tapioni.com/asg_embed.js"
+		data-spots="458576"
+		data-tag="asg"
+		data-subid1="%subid1%"
+		data-subid2="%subid2%"
 	></script>
 </div>
 
