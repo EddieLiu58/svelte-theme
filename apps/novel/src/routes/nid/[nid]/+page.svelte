@@ -42,31 +42,31 @@
 							>
 						</div>
 						{#if browser}
-						<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-							<div>
-								<script
-									async
-									type="application/javascript"
-									src="https://a.magsrv.com/ad-provider.js"
-								></script>
-								<ins class="eas6a97888e" data-zoneid="5135542" />
-								<script>
-									(AdProvider = window.AdProvider || []).push({ serve: {} });
-								</script>
+							<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+								<div>
+									<script
+										async
+										type="application/javascript"
+										src="https://a.magsrv.com/ad-provider.js"
+									></script>
+									<ins class="eas6a97888e" data-zoneid="5135542" />
+									<script>
+										(AdProvider = window.AdProvider || []).push({ serve: {} });
+									</script>
+								</div>
+								<div>
+									<script
+										async
+										type="application/javascript"
+										src="https://a.magsrv.com/ad-provider.js"
+									></script>
+									<ins class="eas6a97888e" data-zoneid="5135546" />
+									<script>
+										(AdProvider = window.AdProvider || []).push({ serve: {} });
+									</script>
+								</div>
 							</div>
-							<div>
-								<script
-									async
-									type="application/javascript"
-									src="https://a.magsrv.com/ad-provider.js"
-								></script>
-								<ins class="eas6a97888e" data-zoneid="5135546" />
-								<script>
-									(AdProvider = window.AdProvider || []).push({ serve: {} });
-								</script>
-							</div>
-						</div>
-					{/if}
+						{/if}
 					</div>
 				</div>
 			</div>
@@ -75,43 +75,53 @@
 	<div
 		class="mx-auto mt-9 flex w-full max-w-6xl flex-col gap-4 rounded-lg bg-white px-12 py-12 drop-shadow-md"
 	>
-	{#if browser}
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+		{#if browser}
+			<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+				<div>
+					<script
+						async
+						type="application/javascript"
+						src="https://a.magsrv.com/ad-provider.js"
+					></script>
+					<ins class="eas6a97888e" data-zoneid="5135548" />
+					<script>
+						(AdProvider = window.AdProvider || []).push({ serve: {} });
+					</script>
+				</div>
+				<div>
+					<script
+						async
+						type="application/javascript"
+						src="https://a.magsrv.com/ad-provider.js"
+					></script>
+					<ins class="eas6a97888e" data-zoneid="5135550" />
+					<script>
+						(AdProvider = window.AdProvider || []).push({ serve: {} });
+					</script>
+				</div>
+				<div>
+					<script
+						async
+						type="application/javascript"
+						src="https://a.magsrv.com/ad-provider.js"
+					></script>
+					<ins class="eas6a97888e" data-zoneid="5135552" />
+					<script>
+						(AdProvider = window.AdProvider || []).push({ serve: {} });
+					</script>
+				</div>
+			</div>
+		{/if}
 		<div>
+			<!-- Ads Managed by AdSpyglass.com -->
+			<!-- Ads Managed by AdSpyglass.com -->
 			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
+				type="text/javascript"
+				src="//cdn.tapioni.com/ip-push.js"
+				data-spot="458575"
+				data-subid1="%subid1%"
 			></script>
-			<ins class="eas6a97888e" data-zoneid="5135548" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
 		</div>
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135550" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135552" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
-	</div>
-{/if}
 		<h2 class="mb-4 text-2xl font-bold">章節</h2>
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 			{#each data.chaptersList as chapter}
