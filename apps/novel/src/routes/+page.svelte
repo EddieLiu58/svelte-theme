@@ -67,51 +67,19 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135532" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135534" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135538" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
-		<div>
-			<script
-				async
-				type="application/javascript"
-				src="https://a.magsrv.com/ad-provider.js"
-			></script>
-			<ins class="eas6a97888e" data-zoneid="5135540" />
-			<script>
-				(AdProvider = window.AdProvider || []).push({ serve: {} });
-			</script>
-		</div>
+	<div class="flex justify-center">
+		<script async src="//cdn.tapioni.com/asg-iframe.js"></script>
+		<iframe
+			title=""
+			class="na"
+			frameborder="0"
+			scrolling="no"
+			width="300"
+			height="250"
+			sandbox="allow-scripts allow-popups allow-forms allow-same-origin"
+			loading="lazy"
+			src="//a.labadena.com/api/spots/458573?p=1&s1=%subid1%&kw="
+		></iframe>
 	</div>
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
@@ -129,9 +97,6 @@
 	</div>
 </div>
 <div>
-	<!-- Ads Managed by AdSpyglass.com -->
-
-	<!-- Ads Managed by AdSpyglass.com -->
 	<script
 		src="//cdn.tapioni.com/vast-im.js"
 		data-spots="457234"
