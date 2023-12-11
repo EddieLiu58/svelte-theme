@@ -14,7 +14,6 @@
 	import '@fontsource/noto-sans-tc/500.css';
 	import '@fontsource/noto-sans-tc/700.css';
 	import '@fontsource/noto-sans-tc/900.css';
-	export let data; // Exported so that child components/pages can provide data.
 	// Create a reactive statement to compute meta tags.
 	$: metaTags = {
 		titleTemplate: '%s - 免費、無廣告輕鬆看小說', // Default title template.
@@ -34,6 +33,7 @@
 <svelte:window />
 <svelte:head>
 	<meta name="6a97888e-site-verification" content="5360d4c26732ab3b66c46360b4716fb3" />
+	<meta name="43f79bc9f27ed25da39c2af9d9cd20de06d245ce" content="43f79bc9f27ed25da39c2af9d9cd20de06d245ce" />
 	<script
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
