@@ -35,12 +35,6 @@
 <svelte:head>
 	<meta name="6a97888e-site-verification" content="5360d4c26732ab3b66c46360b4716fb3" />
 	<script
-		src="https://alwingulla.com/88/tag.min.js"
-		data-zone="26034"
-		async
-		data-cfasync="false"
-	></script>
-	<script
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1755676024054335"
 		crossorigin="anonymous"
