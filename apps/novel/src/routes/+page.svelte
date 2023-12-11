@@ -108,11 +108,8 @@
 	</div>
 </div>
 <div class="ad-exoclick">
-	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
-	<ins class="eas6a97888e" data-zoneid="5134298" />
-	<script>
-		(AdProvider = window.AdProvider || []).push({ serve: {} });
-	</script>
+	<!-- Ads Managed by AdSpyglass.com -->
+<script type="text/javascript" src="//cdn.tapioni.com/ip-push.js" data-spot="459079" data-subid1="%subid1%"></script>
 </div>
 <style lang="postcss">
 	/* :global(html) {
