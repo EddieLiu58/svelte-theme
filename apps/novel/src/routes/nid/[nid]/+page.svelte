@@ -112,16 +112,6 @@
 				</div>
 			</div>
 		{/if}
-		<div>
-			<!-- Ads Managed by AdSpyglass.com -->
-			<!-- Ads Managed by AdSpyglass.com -->
-			<script
-				type="text/javascript"
-				src="//cdn.tapioni.com/ip-push.js"
-				data-spot="458575"
-				data-subid1="%subid1%"
-			></script>
-		</div>
 		<h2 class="mb-4 text-2xl font-bold">章節</h2>
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
 			{#each data.chaptersList as chapter}
@@ -132,10 +122,3 @@
 		</div>
 	</div>
 </div>
-{#if browser}
-	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
-	<ins class="eas6a97888e" data-zoneid="5134298" />
-	<script>
-		(AdProvider = window.AdProvider || []).push({ serve: {} });
-	</script>
-{/if}

@@ -107,7 +107,13 @@
 		>
 	</div>
 </div>
-
+<div class="ad-exoclick">
+	<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+	<ins class="eas6a97888e" data-zoneid="5134298" />
+	<script>
+		(AdProvider = window.AdProvider || []).push({ serve: {} });
+	</script>
+</div>
 <style lang="postcss">
 	/* :global(html) {
 		background-color: theme(colors.gray.100);
