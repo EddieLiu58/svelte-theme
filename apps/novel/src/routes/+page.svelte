@@ -119,8 +119,7 @@
 	</div>
 </div>
 <div class="ad-exoclick">
-	<!-- Ads Managed by AdSpyglass.com -->
-<script type="text/javascript" src="//cdn.tapioni.com/ip-push.js" data-spot="459079" data-subid1="%subid1%"></script>
+
 </div>
 <style lang="postcss">
 	/* :global(html) {
