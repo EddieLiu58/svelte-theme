@@ -67,7 +67,7 @@
 	<div class="session1 relative">
 		<CustomSplide label={'仙俠'} list={xianXiaList} />
 	</div>
-	<div class="flex md:justify-between gap-4">
+	<div class="flex flex-col items-center md:flex-row md:justify-between gap-4">
 		<script async src="//cdn.tapioni.com/asg-iframe.js"></script>
 		<iframe
 			title="ads-1"
