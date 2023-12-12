@@ -34,6 +34,7 @@
 <svelte:head>
 	<meta name="6a97888e-site-verification" content="5360d4c26732ab3b66c46360b4716fb3" />
 	<meta name="43f79bc9f27ed25da39c2af9d9cd20de06d245ce" content="43f79bc9f27ed25da39c2af9d9cd20de06d245ce" />
+	<meta name="clckd" content="936c25584a33270475a24d8e3127710e" />
 	<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 	<script
 		async
