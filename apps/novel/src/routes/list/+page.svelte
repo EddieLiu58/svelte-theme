@@ -83,7 +83,7 @@
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
 		{#each list as item}
 			<li>
-				<a href="{base}/nid/{item.id ? item.id : item.nid}" class="flex gap-2">
+				<a  data-sveltekit-reload href="{base}/nid/{item.id ? item.id : item.nid}" class="flex gap-2">
 					<div class="max-h-[240px] w-full max-w-[110px] overflow-hidden rounded-md">
 						<img src="{baseUrl}/images/{item.id ? item.id : item.nid}.jpg" class="w-full" alt="" />
 					</div>

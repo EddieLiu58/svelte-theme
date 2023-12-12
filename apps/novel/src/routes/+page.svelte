@@ -58,6 +58,7 @@
 	<div class="mt-6 grid grid-cols-4 gap-6 md:grid-cols-6 xl:grid-cols-12">
 		{#each categoryList as category}
 			<a
+			data-sveltekit-reload
 				href="{base}/list/{category}"
 				class="w-full rounded-[180px] border-2 border-solid border-gray-200 bg-slate-100 p-2 text-center text-gray-700 transition-all hover:bg-slate-400 hover:text-white"
 				>{category}</a
@@ -114,7 +115,7 @@
 	</div>
 	<div class="session5 flex justify-center">
 		<a href="https://trafficadbar.com/WilliamWang" target="_top"
-			><img src="https://trafficadbar.com/assets/banners/banner468x60.gif" /></a
+			><img alt="trafficadbar" src="https://trafficadbar.com/assets/banners/banner468x60.gif" /></a
 		>
 	</div>
 </div>
