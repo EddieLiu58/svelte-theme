@@ -113,6 +113,11 @@
 	<div class="session4 relative">
 		<CustomSplide label={'武俠'} list={martialArtsList} />
 	</div>
+	<div class="flex flex-col items-center md:flex-row md:justify-between gap-4">
+		<script async src="//cdn.tapioni.com/asg-iframe.js"></script>
+		<iframe title="ads-4" class="na" frameborder="0" scrolling="no" width="100%" height="100%" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" loading="lazy" src="//a.labadena.com/api/spots/459298?p=1&s1=%subid1%&kw="></iframe>
+		<iframe title="ads-5" class="na" frameborder="0" scrolling="no" width="300" height="250" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" loading="lazy" src="//a.labadena.com/api/spots/459297?p=1&s1=%subid1%&kw="></iframe>
+	</div>
 	<div class="session5 flex justify-center">
 		<a href="https://trafficadbar.com/WilliamWang" target="_top"
 			><img alt="trafficadbar" src="https://trafficadbar.com/assets/banners/banner468x60.gif" /></a
