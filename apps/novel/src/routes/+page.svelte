@@ -107,6 +107,10 @@
 	<div class="session2 relative">
 		<CustomSplide label={'玄幻'} list={fantasylList} />
 	</div>
+	<div class="flex flex-col items-center md:flex-row md:justify-between gap-4">
+		<script src="//cdn.tapioni.com/vast-im.js" data-spots="459306" data-subid1="%subid1%" data-subid2="%subid2%"></script>
+		<script src="//cdn.tapioni.com/vast-im.js" data-spots="459307" data-subid1="%subid1%" data-subid2="%subid2%"></script>
+	</div>
 	<div class="session3 relative">
 		<CustomSplide label={'懸疑'} list={suspenseList} />
 	</div>
